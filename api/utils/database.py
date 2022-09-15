@@ -24,18 +24,14 @@ class Database:
         self.LINK = os.environ.get("DATABASE_URL")
 
     async def setup(self) -> None:
-        try:
-            self.pool = await asyncpg.create_pool(self.LINK)
-        except Exception as e:
-            self.pool = await asyncpg.create_pool(
-                host=os.environ.get("DATABASE_HOST"),
-                port=os.environ.get("DATABASE_PORT"),
-                user=os.environ.get("DATABASE_USER"),
-                password=os.environ.get("DATABASE_PASSWORD"),
-                database=os.environ.get("DATABASE_NAME"),
-                loop=asyncio.get_event_loop(),
-            )
-            print(e)
+        self.pool = await asyncpg.create_pool(
+            host=os.environ.get("DATABASE_HOST"),
+            port=os.environ.get("DATABASE_PORT"),
+            user=os.environ.get("DATABASE_USER"),
+            password=os.environ.get("DATABASE_PASSWORD"),
+            database=os.environ.get("DATABASE_NAME"),
+            loop=asyncio.get_event_loop(),
+        )
         await self.prices.setup(self)
 
     async def close(self) -> None:

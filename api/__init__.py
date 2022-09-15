@@ -1,1 +1,1 @@
-from api.__main__ import session
+from api.__main__ import session, app
