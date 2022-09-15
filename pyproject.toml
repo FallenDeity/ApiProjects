@@ -12,6 +12,7 @@ uvicorn = "^0.18.3"
 python-dotenv = "^0.21.0"
 asyncpg = "^0.26.0"
 pandas = "^1.4.4"
+types-ujson = "^5.4.0"
 
 
 [tool.poetry.dev-dependencies]

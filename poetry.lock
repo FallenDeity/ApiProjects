@@ -349,6 +349,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "types-ujson"
+version = "5.4.0"
+description = "Typing stubs for ujson"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.3.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -391,7 +399,7 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "6c618dad3e0c6fe2681b35b4cf5ff79bb133821ffad33255b549c57c450125dc"
+content-hash = "3354b379f5d0b3c3199a97e72461734a4a191a1a7a42acf82acaa4d8d871a506"
 
 [metadata.files]
 anyio = []
@@ -425,6 +433,7 @@ sniffio = []
 starlette = []
 toml = []
 tomli = []
+types-ujson = []
 typing-extensions = []
 uvicorn = []
 virtualenv = []
