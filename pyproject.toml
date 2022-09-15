@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "agroindia"
+version = "0.1.0"
+description = ""
+authors = ["FallenDeity <61227305+FallenDeity@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.84.0"
+uvicorn = "^0.18.3"
+python-dotenv = "^0.21.0"
+asyncpg = "^0.26.0"
+pandas = "^1.4.4"
+
+
+[tool.poetry.dev-dependencies]
+black = "^22.8.0"
+isort = "^5.10.1"
+mypy = "^0.971"
+pre-commit = "^2.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 129
+target-version = ['py310']
+
+
+[tool.isort]
+profile = "black"
+line_length = 129
+src_paths = ["api"]
+multi_line_output = 4
+color_output = true
+py_version = 310
+supported_extensions = [".py"]
+
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+strict_equality = true
+strict_optional = false
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+show_error_context = true
+show_column_numbers = true
+show_error_codes = true
+pretty = true
+install_types = true
+mypy_path = "api"
