@@ -1,5 +1,6 @@
 import asyncpg
 import os
+import asyncio
 import pandas as pd
 from api.bin import SQL
 from .models import Price
@@ -20,10 +21,21 @@ class Database:
 
     def __init__(self) -> None:
         self.prices = AreaToPrices()
-        self.LINK = os.environ.get("DATABASE")
+        self.LINK = os.environ.get("DATABASE_URL")
 
     async def setup(self) -> None:
-        self.pool = await asyncpg.create_pool(self.LINK)
+        try:
+            self.pool = await asyncpg.create_pool(self.LINK)
+        except Exception as e:
+            self.pool = await asyncpg.create_pool(
+                host=os.environ.get("DATABASE_HOST"),
+                port=os.environ.get("DATABASE_PORT"),
+                user=os.environ.get("DATABASE_USER"),
+                password=os.environ.get("DATABASE_PASSWORD"),
+                database=os.environ.get("DATABASE_NAME"),
+                loop=asyncio.get_event_loop(),
+            )
+            print(e)
         await self.prices.setup(self)
 
     async def close(self) -> None:

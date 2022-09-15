@@ -1,4 +1,5 @@
 import os
+import typing
 import uvicorn
 from .logger import Logs
 from api.utils import Database
@@ -18,6 +19,7 @@ class API:
     def __init__(self) -> None:
         self.database = Database()
         self.logger = Logs()
+        self.prepare()
 
     async def _load_routes(self) -> None:
         for file in os.listdir(self.PATH):
@@ -25,9 +27,15 @@ class API:
                 module = __import__(f"{'.'.join(self.PATH.split('/'))}.{file[:-3]}", fromlist=["setup"])
                 await module.setup(self.app, self.database, self.logger)
 
-    def run(self) -> None:
+    def prepare(self) -> None:
         self.app.add_event_handler("startup", self.database.setup)
         self.app.add_event_handler("startup", self._load_routes)
         self.app.add_event_handler("shutdown", self.database.close)
         self.logger.log("API started", "info")
+
+    @property
+    def get_app(self) -> FastAPI:
+        return self.app
+
+    def run(self, *_args: typing.Optional[typing.Any], **_kwargs: typing.Optional[typing.Any]) -> None:
         uvicorn.run(self.app, debug=True)
