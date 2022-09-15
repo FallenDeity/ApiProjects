@@ -1,11 +1,9 @@
 import logging
 import logging.handlers
 
-__name__: str = "AgroIndia"
-
 
 class Logs:
-    def __init__(self):
+    def __init__(self) -> None:
         self.file_logger = logging.getLogger(__name__)
         self.stream_logger = logging.getLogger(__name__)
         self.file_logger.setLevel(logging.DEBUG)

@@ -50,7 +50,7 @@ class AreaToPrices(DatabaseModel):
     @property
     async def last_index(self) -> int:
         data = await self.exec_fetchone("SELECT MAX(ID) FROM prices")
-        return data[0] if data else 0
+        return int(data[0]) if data else 0
 
     @property
     async def get_all_states(self) -> list[str]:

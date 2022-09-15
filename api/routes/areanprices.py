@@ -20,7 +20,7 @@ class AreanPrices:
 
     @staticmethod
     def intersection(items: list[list[Price]]) -> list[Price]:
-        return list(set.intersection(*map(set, items)))
+        return list(set.intersection(*map(lambda x: set(x), items)))
 
     async def get_by_id(self, _id: int) -> Price:
         result: Price = await self.database.prices.get_by_id(_id)
@@ -80,7 +80,7 @@ class AreanPrices:
             self.logger.log(f"No commodity found with that budget: {initial} - {final}", "error")
             raise HTTPException(
                 status_code=404,
-                detail=f"No commodity found with that budget. Please check the spelling. Valid budgets are {', '.join(await self.database.prices.get_all_budgets)}",
+                detail=f"No commodity found with that budget.",
             )
         self.logger.log(f"Found {len(result)} commodities with budget: {initial} - {final}", "info")
         return result
@@ -113,16 +113,10 @@ class AreanPrices:
     def setup(self) -> None:
         self.router.add_api_route("/prices/id", self.get_by_id, methods=["GET"], response_model=Price)
         self.router.add_api_route("/prices/state", self.get_by_state, methods=["GET"], response_model=list[Price])
-        self.router.add_api_route(
-            "/prices/district", self.get_by_district, methods=["GET"], response_model=list[Price]
-        )
+        self.router.add_api_route("/prices/district", self.get_by_district, methods=["GET"], response_model=list[Price])
         self.router.add_api_route("/prices/market", self.get_by_market, methods=["GET"], response_model=list[Price])
-        self.router.add_api_route(
-            "/prices/commodity", self.get_by_commodity, methods=["GET"], response_model=list[Price]
-        )
-        self.router.add_api_route(
-            "/prices/budget", self.get_by_budget, methods=["GET"], response_model=list[Price]
-        )
+        self.router.add_api_route("/prices/commodity", self.get_by_commodity, methods=["GET"], response_model=list[Price])
+        self.router.add_api_route("/prices/budget", self.get_by_budget, methods=["GET"], response_model=list[Price])
         self.router.add_api_route("/prices/filter", self.get_items, methods=["GET"], response_model=list[Price])
 
 

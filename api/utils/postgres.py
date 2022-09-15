@@ -20,8 +20,7 @@ class DatabaseModel:
         await self.database_pool.executemany(query, *data)
 
     async def exec_fetchone(self, query: str, data: typing.Optional[tuple] = None) -> typing.Optional[asyncpg.Record]:
-        data = data or []
-        result: typing.Optional[asyncpg.Record] = await self.database_pool.fetchrow(query, *data)
+        result: typing.Optional[asyncpg.Record] = await self.database_pool.fetchrow(query, *(data or []))
         return result
 
     async def exec_fetchall(self, query: str, data: typing.Optional[tuple[typing.Any, ...]] = None) -> list[asyncpg.Record]:
