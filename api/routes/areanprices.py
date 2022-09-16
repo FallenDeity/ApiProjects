@@ -1,6 +1,8 @@
-from api.utils import Price
 from typing import TYPE_CHECKING
-from fastapi import APIRouter, HTTPException, FastAPI
+
+from fastapi import APIRouter, FastAPI, HTTPException
+
+from api.utils import Price
 
 if TYPE_CHECKING:
     from api.setup import Database, Logs

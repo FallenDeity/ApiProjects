@@ -20,8 +20,8 @@ repos:
     hooks:
       - id: isort
         name: isort
-        files: api
         pass_filenames: false
+        files: api
         entry: poetry run isort .
         language: python
         stages:

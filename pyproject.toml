@@ -13,6 +13,10 @@ python-dotenv = "^0.21.0"
 asyncpg = "^0.26.0"
 pandas = "^1.4.4"
 types-ujson = "^5.4.0"
+aiofiles = "^22.1.0"
+types-aiofiles = "^22.1.0"
+phonenumbers = "^8.12.55"
+Jinja2 = "^3.1.2"
 
 
 [tool.poetry.dev-dependencies]
@@ -33,13 +37,13 @@ target-version = ['py310']
 
 
 [tool.isort]
-profile = "black"
 line_length = 129
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
 src_paths = ["api"]
-multi_line_output = 4
-color_output = true
-py_version = 310
-supported_extensions = [".py"]
 
 
 [tool.mypy]

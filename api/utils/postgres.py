@@ -1,13 +1,25 @@
-import asyncpg
 import typing
 
+import aiofiles
+import asyncpg
+
+from .models import Sql
 
 __all__: tuple[str, ...] = ("DatabaseModel",)
 
 
 class DatabaseModel:
 
+    __slots__: tuple[str, ...] = ("database_pool", "LINES")
     database_pool: asyncpg.pool.Pool
+    TABLES: str = "api/bin/tables"
+    TABLE: str
+    LINES: Sql
+
+    async def execute_statements(self) -> None:
+        async with aiofiles.open(f"{self.TABLES}/{self.TABLE}.sql", "r") as file:
+            scripts = await file.read()
+        self.LINES = Sql(*[i for i in scripts.split(";") if i.strip()])
 
     async def exec_write_query(self, query: str, data: typing.Optional[tuple] = None) -> None:
         if data:

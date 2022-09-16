@@ -1,9 +1,12 @@
 import os
 import typing
+
 import uvicorn
-from .logger import Logs
-from api.utils import Database
 from fastapi import FastAPI
+
+from api.utils import Database
+
+from .logger import Logs
 
 
 class API:

@@ -1,4 +1,12 @@
 [[package]]
+name = "aiofiles"
+version = "22.1.0"
+description = "File support for asyncio."
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
 name = "anyio"
 version = "3.6.1"
 description = "High level compatibility layer for multiple asynchronous event loop implementations"
@@ -156,6 +164,28 @@ colors = ["colorama (>=0.4.3,<0.5.0)"]
 plugins = ["setuptools"]
 
 [[package]]
+name = "jinja2"
+version = "3.1.2"
+description = "A very fast and expressive template engine."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.0"
+
+[package.extras]
+i18n = ["Babel (>=2.7)"]
+
+[[package]]
+name = "markupsafe"
+version = "2.1.1"
+description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "mypy"
 version = "0.971"
 description = "Optional static typing for Python"
@@ -220,6 +250,14 @@ description = "Utility library for gitignore style pattern matching of file path
 category = "dev"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "phonenumbers"
+version = "8.12.55"
+description = "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "platformdirs"
@@ -349,6 +387,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "types-aiofiles"
+version = "22.1.0"
+description = "Typing stubs for aiofiles"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "types-ujson"
 version = "5.4.0"
 description = "Typing stubs for ujson"
@@ -399,9 +445,10 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "3354b379f5d0b3c3199a97e72461734a4a191a1a7a42acf82acaa4d8d871a506"
+content-hash = "84a00ca87a21a00f8dca75e47641773f4232e0689651da39a6e0ae0f535a69e1"
 
 [metadata.files]
+aiofiles = []
 anyio = []
 asyncpg = []
 black = []
@@ -415,12 +462,15 @@ h11 = []
 identify = []
 idna = []
 isort = []
+jinja2 = []
+markupsafe = []
 mypy = []
 mypy-extensions = []
 nodeenv = []
 numpy = []
 pandas = []
 pathspec = []
+phonenumbers = []
 platformdirs = []
 pre-commit = []
 pydantic = []
@@ -433,6 +483,7 @@ sniffio = []
 starlette = []
 toml = []
 tomli = []
+types-aiofiles = []
 types-ujson = []
 typing-extensions = []
 uvicorn = []

@@ -1,11 +1,11 @@
-import asyncpg
-import os
 import asyncio
-import pandas as pd
-from api.bin import SQL
-from .models import Price
-from .postgres import DatabaseModel
+import os
 
+import asyncpg
+import pandas as pd
+
+from .models import Price, Sql, User
+from .postgres import DatabaseModel
 
 __all__: tuple[str, ...] = (
     "AreaToPrices",
@@ -15,12 +15,13 @@ __all__: tuple[str, ...] = (
 
 class Database:
 
-    __slots__: tuple[str, ...] = ("prices", "pool", "LINK")
+    __slots__: tuple[str, ...] = ("prices", "pool", "LINK", "users")
     pool: asyncpg.pool.Pool
     LINK: str
 
     def __init__(self) -> None:
         self.prices = AreaToPrices()
+        self.users = Register()
         self.LINK = os.environ.get("DATABASE_URL")
 
     async def setup(self) -> None:
@@ -33,6 +34,7 @@ class Database:
             loop=asyncio.get_event_loop(),
         )
         await self.prices.setup(self)
+        await self.users.setup(self)
 
     async def close(self) -> None:
         await self.pool.close()
@@ -40,20 +42,24 @@ class Database:
 
 class AreaToPrices(DatabaseModel):
 
-    __slots__: tuple[str, ...] = ("database_pool",)
+    __slots__: tuple[str, ...] = ("database_pool", "LINES")
     PATH: str = "api/assets/area_and_prices.csv"
+    TABLE: str = "prices"
+    LINES: Sql
 
-    def read_data(self) -> pd.DataFrame:
-        df = pd.read_csv(self.PATH, index_col=-1)
+    def read_data(self, index: int) -> pd.DataFrame:
+        df = pd.read_csv(self.PATH, index_col=index)
         return df
 
     async def setup(self, database: "Database") -> None:
         self.database_pool = database.pool
-        await self.exec_write_query(SQL.area_to_prices_c)
+        await self.execute_statements()
+        await self.exec_write_query(self.LINES.create)
         check = await self.exec_fetchone("SELECT * FROM prices")
         if not check:
-            data = self.read_data()
-            await self.exec_write_many(SQL.area_to_prices_i, (data.values.tolist(),))
+            data = self.read_data(-1)
+            await self.exec_write_many(self.LINES.insert, (data.values.tolist(),))
+            print("Database has been setup successfully!")
 
     @property
     async def last_index(self) -> int:
@@ -73,6 +79,10 @@ class AreaToPrices(DatabaseModel):
     @property
     async def get_all_districts(self) -> list[str]:
         data = await self.exec_fetchall("SELECT DISTINCT DISTRICT FROM prices")
+        return [row[0] for row in data]
+
+    async def get_districts_by_state(self, state: str) -> list[str]:
+        data = await self.exec_fetchall("SELECT DISTINCT DISTRICT FROM prices WHERE STATE = $1", (state,))
         return [row[0] for row in data]
 
     @property
@@ -105,3 +115,55 @@ class AreaToPrices(DatabaseModel):
             min_price, max_price = max_price, min_price
         data = await self.exec_fetchall("SELECT * FROM prices WHERE MODAL_PRICE BETWEEN $1 AND $2", (min_price, max_price))
         return [Price(*row) for row in data]
+
+
+class Register(DatabaseModel):
+
+    __slots__: tuple[str, ...] = ("database_pool", "LINES")
+    TABLE: str = "register"
+    LINES: Sql
+
+    async def setup(self, database: "Database") -> None:
+        self.database_pool = database.pool
+        await self.execute_statements()
+        await self.exec_write_query(self.LINES.create)
+
+    async def check_number(self, number: int) -> bool:
+        data = await self.exec_fetchone("SELECT * FROM users WHERE PHONENUMBER = $1", (number,))
+        return True if data else False
+
+    async def login_user(self, number: int, password: str) -> bool:
+        data = await self.exec_fetchone("SELECT * FROM users WHERE PHONENUMBER = $1 AND PASSWORD = $2", (number, password))
+        return True if data else False
+
+    async def register_user(self, user: User) -> bool:
+        if await self.check_number(user.phone):
+            return False
+        await self.exec_write_query(self.LINES.insert, (*list(user.__dict__.values()),))
+        return True
+
+    async def update_password(self, number: int, password: str) -> None:
+        await self.exec_write_query("UPDATE users SET PASSWORD = $1 WHERE PHONENUMBER = $2", (password, number))
+
+    async def update_state(self, number: int, state: str) -> None:
+        await self.exec_write_query("UPDATE users SET STATE = $1 WHERE PHONENUMBER = $2", (state, number))
+
+    async def update_district(self, number: int, district: str) -> None:
+        await self.exec_write_query("UPDATE users SET DISTRICT = $1 WHERE PHONENUMBER = $2", (district, number))
+
+    async def get_user(self, number: int) -> User:
+        data = await self.exec_fetchone("SELECT * FROM users WHERE PHONENUMBER = $1", (number,))
+        return User(*data) if data else None
+
+    async def delete_user(self, number: int) -> None:
+        await self.exec_write_query("DELETE FROM users WHERE PHONENUMBER = $1", (number,))
+
+    @property
+    async def get_all_users(self) -> list[User]:
+        data = await self.exec_fetchall("SELECT * FROM users")
+        return [User(*row) for row in data]
+
+    @property
+    async def total_users(self) -> int:
+        data = await self.exec_fetchone("SELECT COUNT(*) FROM users")
+        return int(data[0]) if data else 0
