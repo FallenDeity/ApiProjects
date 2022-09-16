@@ -98,5 +98,5 @@ class Login:
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
     login = Login(database, logger)
     login.setup()
-    app.include_router(login.router)
+    app.include_router(login.router, prefix="/api/v1", tags=["Login"])
     logger.log("Login routes setup complete", "info")

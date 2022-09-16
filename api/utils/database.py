@@ -4,7 +4,7 @@ import os
 import asyncpg
 import pandas as pd
 
-from .models import Price, Sql, User
+from .models import Price, Production, Sql, User
 from .postgres import DatabaseModel
 
 __all__: tuple[str, ...] = (
@@ -15,13 +15,14 @@ __all__: tuple[str, ...] = (
 
 class Database:
 
-    __slots__: tuple[str, ...] = ("prices", "pool", "LINK", "users")
+    __slots__: tuple[str, ...] = ("prices", "pool", "LINK", "users", "production")
     pool: asyncpg.pool.Pool
     LINK: str
 
     def __init__(self) -> None:
         self.prices = AreaToPrices()
         self.users = Register()
+        self.production = Produce()
         self.LINK = os.environ.get("DATABASE_URL")
 
     async def setup(self) -> None:
@@ -35,9 +36,63 @@ class Database:
         )
         await self.prices.setup(self)
         await self.users.setup(self)
+        await self.production.setup(self)
 
     async def close(self) -> None:
         await self.pool.close()
+
+
+class Produce(DatabaseModel):
+    __slots__: tuple[str, ...] = ("database_pool", "LINES")
+    path: str = "api/assets/yearly_production.csv"
+    LINES: Sql
+    TABLE: str = "production"
+    BASE: str = "Agricultural Production Foodgrains "
+
+    def read_data(self) -> pd.DataFrame:
+        df = pd.read_csv(self.path)
+        return df.fillna(0).values.tolist()
+
+    async def setup(self, database: "Database") -> None:
+        self.database_pool = database.pool
+        await self.execute_statements()
+        await self.exec_write_query(self.LINES.create)
+        check = await self.exec_fetchone("SELECT * FROM production")
+        if not check:
+            data = self.read_data()
+            agg = [data[i][:3] + [data[i][3:]] for i in range(len(data))]
+            await self.exec_write_many(self.LINES.insert, (agg,))
+            print("Production data loaded")
+
+    @property
+    async def get_all(self) -> list[Production]:
+        data = await self.exec_fetchall("SELECT * FROM production")
+        return [Production(*row) for row in data]
+
+    @property
+    async def get_all_crops(self) -> list[str]:
+        data = await self.get_all
+        return [i.CROP.replace(self.BASE, "").strip().split()[0] for i in data]
+
+    @property
+    async def get_all_seasons(self) -> list[str]:
+        return ["Kharif", "Rabi"]
+
+    async def get_by_id(self, _id: int) -> Production:
+        data = await self.exec_fetchone("SELECT * FROM production WHERE ID = $1", (_id,))
+        return Production(*data)
+
+    async def get_by_name(self, name: str) -> list[Production]:
+        data = await self.exec_fetchall("SELECT * FROM production WHERE CROP LIKE $1", (f"%{name}%",))
+        return [Production(*i) for i in data]
+
+    async def get_by_frequency(self, frequency: str) -> list[Production]:
+        data = await self.exec_fetchall("SELECT * FROM production WHERE CROP LIKE $1", (f"%{frequency}",))
+        return [Production(*row) for row in data]
+
+    async def get_by_avg_production(self, avg_production: float) -> list[Production]:
+        data = await self.exec_fetchall("SELECT * FROM prices WHERE SUM(VALUES) > $1", (avg_production,))
+        return [Production(*row) for row in data]
 
 
 class AreaToPrices(DatabaseModel):

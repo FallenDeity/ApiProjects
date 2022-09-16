@@ -1,7 +1,29 @@
 import datetime
 from dataclasses import dataclass
 
-__all__: tuple[str, ...] = ("Price", "Sql", "User")
+__all__: tuple[str, ...] = ("Price", "Sql", "User", "Production")
+
+
+@dataclass
+class Value:
+    YEAR: int
+    PRODUCE: float
+
+
+@dataclass
+class Production:
+    ID: int
+    CROP: str
+    FREQUENCY: str
+    UNIT: str
+    VALUES: dict[int, float]
+
+    def __init__(self, _id: int, crop: str, frequency: str, unit: str, values: list[float]) -> None:
+        self.ID = _id
+        self.CROP = crop
+        self.FREQUENCY = frequency
+        self.UNIT = unit
+        self.VALUES = dict(zip(range(1993, 2015), values))
 
 
 @dataclass(frozen=True)
