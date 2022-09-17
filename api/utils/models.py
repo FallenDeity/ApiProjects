@@ -16,14 +16,14 @@ class Production:
     CROP: str
     FREQUENCY: str
     UNIT: str
-    VALUES: dict[int, float]
+    VALUES: list[Value]
 
     def __init__(self, _id: int, crop: str, frequency: str, unit: str, values: list[float]) -> None:
         self.ID = _id
         self.CROP = crop
         self.FREQUENCY = frequency
         self.UNIT = unit
-        self.VALUES = dict(zip(range(1993, 2015), values))
+        self.VALUES = [Value(int(year), value) for year, value in enumerate(values, start=1993)]
 
 
 @dataclass(frozen=True)

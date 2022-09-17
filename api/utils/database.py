@@ -1,6 +1,7 @@
 import asyncio
 import os
 
+import aiohttp
 import asyncpg
 import pandas as pd
 
@@ -15,9 +16,10 @@ __all__: tuple[str, ...] = (
 
 class Database:
 
-    __slots__: tuple[str, ...] = ("prices", "pool", "LINK", "users", "production")
+    __slots__: tuple[str, ...] = ("prices", "pool", "LINK", "users", "production", "client")
     pool: asyncpg.pool.Pool
     LINK: str
+    client: aiohttp.ClientSession
 
     def __init__(self) -> None:
         self.prices = AreaToPrices()
@@ -37,6 +39,7 @@ class Database:
         await self.prices.setup(self)
         await self.users.setup(self)
         await self.production.setup(self)
+        self.client = aiohttp.ClientSession()
 
     async def close(self) -> None:
         await self.pool.close()
