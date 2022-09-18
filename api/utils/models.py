@@ -1,7 +1,35 @@
 import datetime
 from dataclasses import dataclass
 
-__all__: tuple[str, ...] = ("Price", "Sql", "User", "Production")
+__all__: tuple[str, ...] = ("Price", "Sql", "User", "Production", "Kingdom", "Divisions", "Classes")
+
+
+@dataclass
+class Classes:
+    Chlorophyta: list[str]
+    Bryophyta: list[str]
+    Charophyta: list[str]
+    Marchantiophyta: list[str]
+    Tracheophyta: list[str]
+    Anthocerotophyta: list[str]
+    Rhodophyta: list[str]
+    Glaucophyta: list[str]
+    Myxomycota: list[str]
+    Ascomycota: list[str]
+
+
+@dataclass
+class Divisions:
+    Viridiplantae: list[str]
+    Biliphyta: list[str]
+    Eomycota: list[str]
+    Dikarya: list[str]
+
+
+@dataclass
+class Kingdom:
+    Plantae: list[str]
+    Fungi: list[str]
 
 
 @dataclass

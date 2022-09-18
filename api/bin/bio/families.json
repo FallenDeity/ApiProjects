@@ -1,0 +1,2346 @@
+{
+  "Chlamydomonadales": [
+    "Chlamydomonadaceae",
+    "Chlorococcaceae",
+    "Spondylomoraceae",
+    "Coccomyxaceae",
+    "Hormotilaceae",
+    "Protosiphonaceae",
+    "Characiochloridaceae",
+    "Dunaliellaceae",
+    "Volvocaceae",
+    "Haematococcaceae",
+    "Phacotaceae",
+    "Endosphaeraceae",
+    "Dictyosphaeriaceae",
+    "Micractiniaceae",
+    "Treubariaceae",
+    "Chlorosarcinaceae",
+    "Palmellopsidaceae",
+    "Cylindrocapsaceae",
+    "Tetrasporaceae",
+    "Chlorochytriaceae",
+    "Hypnomonadaceae",
+    "Scotiellocystoidaceae",
+    "Characiosiphonaceae",
+    "Sphaerodictyaceae",
+    "Rhopalosolenaceae",
+    "Gloeocystaceae",
+    "Sphaerocystidaceae",
+    "Actinochloridaceae",
+    "Palmellaceae",
+    "Gloeodendraceae",
+    "Carteriaceae",
+    "Dangeardinellaceae",
+    "Chlorangiellaceae",
+    "Tetrabaenaceae",
+    "Goniaceae",
+    "Pleurastraceae",
+    "Raciborskiellaceae",
+    "Asteromonadaceae"
+  ],
+  "Sphaeropleales": [
+    "Characiaceae",
+    "Hydrodictyaceae",
+    "Scenedesmaceae",
+    "Microsporaceae",
+    "Sphaeropleaceae",
+    "Radiococcaceae",
+    "Selenastraceae",
+    "Neochloridaceae",
+    "Bracteacoccaceae",
+    "Schroederiaceae",
+    "Tumidellaceae",
+    "Pseudomuriellaceae",
+    "Schizochlamydaceae",
+    "Chromochloridaceae",
+    "Dictyochloridaceae",
+    "Bracteamorphaceae",
+    "Dictyococcaceae",
+    "Rotundellaceae",
+    "Mychonastaceae"
+  ],
+  "Chlorellales": [
+    "Oocystaceae",
+    "Ctenocladaceae",
+    "Chlorellaceae",
+    "Eremosphaeraceae",
+    "Leptosiraceae"
+  ],
+  "Ulotrichales": [
+    "Gomontiaceae",
+    "Ulotrichaceae",
+    "Gloeotilaceae",
+    "Gayraliaceae"
+  ],
+  "Chaetopeltidales": [
+    "Chaetopeltidaceae"
+  ],
+  "Cladophorales": [
+    "Anadyomenaceae",
+    "Cladophoraceae",
+    "Valoniaceae",
+    "Siphonocladaceae",
+    "Boodleaceae",
+    "Pithophoraceae",
+    "Okellyaceae",
+    "Pseudocladophoraceae"
+  ],
+  "Dasycladales": [
+    "Dasycladaceae",
+    "Polyphysaceae"
+  ],
+  "Bryopsidales": [
+    "Bryopsidaceae",
+    "Codiaceae",
+    "Derbesiaceae",
+    "Chaetosiphonaceae",
+    "Caulerpaceae",
+    "Udoteaceae",
+    "Dichotomosiphonaceae",
+    "Halimedaceae",
+    "Pseudoudoteaceae",
+    "Pseudocodiaceae",
+    "Ostreobiaceae",
+    "Rhipiliaceae"
+  ],
+  "Chaetosphaeridiales": [
+    "Chaetosphaeridiaceae"
+  ],
+  "Porphyridiales": [
+    "Phragmonemataceae",
+    "Porphyridiaceae"
+  ],
+  "Bonnemaisoniales": [
+    "Bonnemaisoniaceae",
+    "Naccariaceae"
+  ],
+  "Gigartinales": [
+    "Sphaerococcaceae",
+    "Acrotylaceae",
+    "Calosiphoniaceae",
+    "Dumontiaceae",
+    "Kallymeniaceae",
+    "Polyideaceae",
+    "Solieriaceae",
+    "Cruoriaceae",
+    "Phyllophoraceae",
+    "Gigartinaceae",
+    "Furcellariaceae",
+    "Blinksiaceae",
+    "Gloiosiphoniaceae",
+    "Rhizophyllidaceae",
+    "Endocladiaceae",
+    "Schmitziellaceae",
+    "Tichocarpaceae",
+    "Caulacanthaceae",
+    "Dicranemataceae",
+    "Cystocloniaceae",
+    "Cubiculosporaceae",
+    "Corynocystaceae",
+    "Areschougiaceae",
+    "Phacelocarpaceae",
+    "Nizymeniaceae",
+    "Rissoellaceae",
+    "Mychodeophyllaceae",
+    "Haemeschariaceae",
+    "Gainiaceae",
+    "Mychodeaceae"
+  ],
+  "Nemastomatales": [
+    "Nemastomataceae",
+    "Schizymeniaceae"
+  ],
+  "Gracilariales": [
+    "Gracilariaceae",
+    "Pterocladiophilaceae"
+  ],
+  "Rhodymeniales": [
+    "Rhodymeniaceae",
+    "Champiaceae",
+    "Lomentariaceae",
+    "Fryeellaceae",
+    "Faucheaceae",
+    "Hymenocladiaceae"
+  ],
+  "Ceramiales": [
+    "Ceramiaceae",
+    "Rhodomelaceae",
+    "Delesseriaceae",
+    "Dasyaceae"
+  ],
+  "Jungermanniales": [
+    "Trichocoleaceae",
+    "Acrobolbaceae",
+    "Arnelliaceae",
+    "Scapaniaceae",
+    "Geocalycaceae",
+    "Gyrothyraceae",
+    "Herbertaceae",
+    "Mastigophoraceae",
+    "Pseudolepicoleaceae",
+    "Lepidoziaceae",
+    "Schistochilaceae",
+    "Cephaloziaceae",
+    "Antheliaceae",
+    "Calypogeiaceae",
+    "Jackiellaceae",
+    "Adelanthaceae",
+    "Cephaloziellaceae",
+    "Lophocoleaceae",
+    "Plagiochilaceae",
+    "Jungermanniaceae",
+    "Lophoziaceae",
+    "Gymnomitriaceae",
+    "Trichotemnomataceae",
+    "Grolleaceae",
+    "Lepicoleaceae",
+    "Solenostomataceae",
+    "Blepharidophyllaceae",
+    "Brevianthaceae",
+    "Balantiopsidaceae",
+    "Myliaceae",
+    "Stephaniellaceae",
+    "Diettertiaceae",
+    "Hygrobiellaceae",
+    "Endogemmataceae",
+    "Harpanthaceae",
+    "Anastrophyllaceae",
+    "Blepharostomataceae",
+    "Saccogynaceae",
+    "Notoscyphaceae",
+    "Southbyaceae"
+  ],
+  "Pleuroziales": [
+    "Pleuroziaceae"
+  ],
+  "Porellales": [
+    "Lejeuneaceae",
+    "Frullaniaceae",
+    "Lepidolaenaceae",
+    "Porellaceae",
+    "Radulaceae",
+    "Jubulaceae",
+    "Goebeliellaceae"
+  ],
+  "Pelliales": [
+    "Pelliaceae",
+    "Noterocladaceae"
+  ],
+  "Pallaviciniales": [
+    "Hymenophytaceae",
+    "Phyllothalliaceae",
+    "Sandeothallaceae",
+    "Moerckiaceae",
+    "Pallaviciniaceae"
+  ],
+  "Metzgeriales": [
+    "Aneuraceae",
+    "Metzgeriaceae"
+  ],
+  "Marchantiales": [
+    "Conocephalaceae",
+    "Ricciaceae",
+    "Oxymitraceae",
+    "Corsiniaceae",
+    "Targioniaceae",
+    "Monocleaceae",
+    "Cleveaceae",
+    "Aytoniaceae",
+    "Monosoleniaceae",
+    "Marchantiaceae",
+    "Wiesnerellaceae",
+    "Cyathodiaceae",
+    "Dumortieraceae"
+  ],
+  "Sphagnales": [
+    "Sphagnaceae"
+  ],
+  "Pseudoditrichales": [
+    "Pseudoditrichaceae"
+  ],
+  "Hypnales": [
+    "Brachytheciaceae",
+    "Hylocomiaceae",
+    "Fontinalaceae",
+    "Fabroniaceae",
+    "Neckeraceae",
+    "Hypnaceae",
+    "Plagiotheciaceae",
+    "Leucodontaceae",
+    "Cryphaeaceae",
+    "Microtheciellaceae",
+    "Thuidiaceae",
+    "Echinodiaceae",
+    "Lembophyllaceae",
+    "Myriniaceae",
+    "Amblystegiaceae",
+    "Rhytidiaceae",
+    "Sematophyllaceae",
+    "Entodontaceae",
+    "Leskeaceae",
+    "Climaciaceae",
+    "Meteoriaceae",
+    "Prionodontaceae",
+    "Regmatodontaceae",
+    "Rutenbergiaceae",
+    "Lepyrodontaceae",
+    "Pterobryaceae",
+    "Sorapillaceae",
+    "Trachylomataceae",
+    "Calliergonaceae",
+    "Pylaisiadelphaceae",
+    "Catagoniaceae",
+    "Myuriaceae",
+    "Symphyodontaceae",
+    "Rigodiaceae",
+    "Phyllogoniaceae",
+    "Orthorrhynchiaceae",
+    "Anomodontaceae",
+    "Theliaceae",
+    "Leptodontaceae",
+    "Pterigynandraceae",
+    "Helodiaceae",
+    "Stereophyllaceae",
+    "Stereodontaceae",
+    "Jocheniaceae",
+    "Callicladiaceae",
+    "Taxiphyllaceae",
+    "Pylaisiaceae",
+    "Pseudoleskeaceae",
+    "Pseudoleskeellaceae",
+    "Heterocladiellaceae",
+    "Pleuroziopsaceae"
+  ],
+  "Ptychomniales": [
+    "Ptychomniaceae"
+  ],
+  "Grimmiales": [
+    "Seligeriaceae",
+    "Grimmiaceae",
+    "Ptychomitriaceae"
+  ],
+  "Lycopodiales": [
+    "Lycopodiaceae"
+  ],
+  "Psilotales": [
+    "Psilotaceae"
+  ],
+  "Selaginellales": [
+    "Selaginellaceae"
+  ],
+  "Polypodiales": [
+    "Dennstaedtiaceae",
+    "Polypodiaceae",
+    "Blechnaceae",
+    "Tectariaceae",
+    "Woodsiaceae",
+    "Onocleaceae",
+    "Lomariopsidaceae",
+    "Oleandraceae",
+    "Lindsaeaceae",
+    "Cystodiaceae",
+    "Saccolomataceae",
+    "Lonchitidaceae",
+    "Thelypteridaceae",
+    "Davalliaceae",
+    "Aspleniaceae",
+    "Dryopteridaceae",
+    "Pteridaceae"
+  ],
+  "Marattiales": [
+    "Marattiaceae"
+  ],
+  "Schizaeales": [
+    "Schizaeaceae",
+    "Anemiaceae",
+    "Lygodiaceae"
+  ],
+  "Pinales": [
+    "Cupressaceae",
+    "Pinaceae",
+    "Araucariaceae",
+    "Podocarpaceae",
+    "Sciadopityaceae",
+    "Taxaceae"
+  ],
+  "Magnoliales": [
+    "Myristicaceae",
+    "Annonaceae",
+    "Himantandraceae",
+    "Degeneriaceae",
+    "Magnoliaceae",
+    "Eupomatiaceae"
+  ],
+  "Cycadales": [
+    "Cycadaceae",
+    "Zamiaceae"
+  ],
+  "Canellales": [
+    "Winteraceae",
+    "Canellaceae"
+  ],
+  "Phyllosiphonales": [
+    "Phyllosiphonaceae"
+  ],
+  "Prasiolales": [
+    "Prasiolaceae",
+    "Koliellaceae"
+  ],
+  "Ulvales": [
+    "Ulvaceae",
+    "Bolbocoleaceae",
+    "Phaeophilaceae",
+    "Kornmanniaceae",
+    "Ulvellaceae",
+    "Cloniophoraceae",
+    "Jaoaceae"
+  ],
+  "Chaetophorales": [
+    "Chaetophoraceae",
+    "Aphanochaetaceae",
+    "Schizomeridaceae"
+  ],
+  "Zygnematales": [
+    "Zygnemataceae",
+    "Mesotaeniaceae"
+  ],
+  "Desmidiales": [
+    "Desmidiaceae",
+    "Closteriaceae",
+    "Peniaceae",
+    "Gonatozygaceae"
+  ],
+  "Pyramimonadales": [
+    "Polyblepharidaceae",
+    "Pterospermataceae",
+    "Pyramimonadaceae"
+  ],
+  "Nephroselmidales": [
+    "Nephroselmidaceae"
+  ],
+  "Chlorodendrales": [
+    "Halosphaeraceae",
+    "Chlorodendraceae"
+  ],
+  "Goniotrichales": [
+    "Goniotrichaceae"
+  ],
+  "Bangiales": [
+    "Bangiaceae"
+  ],
+  "Batrachospermales": [
+    "Lemaneaceae",
+    "Batrachospermaceae"
+  ],
+  "Gelidiales": [
+    "Gelidiellaceae",
+    "Gelidiaceae",
+    "Pterocladiaceae"
+  ],
+  "Takakiales": [
+    "Takakiaceae"
+  ],
+  "Compsopogonales": [
+    "Compsopogonaceae",
+    "Boldiaceae"
+  ],
+  "Fossombroniales": [
+    "Makinoaceae",
+    "Allisoniaceae",
+    "Petalophyllaceae",
+    "Calyculariaceae",
+    "Fossombroniaceae"
+  ],
+  "Andreaeobryales": [
+    "Andreaeobryaceae"
+  ],
+  "Polytrichales": [
+    "Polytrichaceae"
+  ],
+  "Andreaeales": [
+    "Andreaeaceae"
+  ],
+  "Gigaspermales": [
+    "Gigaspermaceae"
+  ],
+  "Pottiales": [
+    "Ephemeraceae",
+    "Mitteniaceae",
+    "Pottiaceae",
+    "Pleurophascaceae",
+    "Serpotortellaceae",
+    "Micromitriaceae",
+    "Timmiellaceae"
+  ],
+  "Funariales": [
+    "Disceliaceae",
+    "Funariaceae"
+  ],
+  "Bryales": [
+    "Mniaceae",
+    "Bryaceae",
+    "Phyllodrepaniaceae",
+    "Pulchrinodaceae",
+    "Leptostomataceae",
+    "Roellobryaceae",
+    "Mielichhoferiaceae"
+  ],
+  "Bartramiales": [
+    "Bartramiaceae"
+  ],
+  "Timmiales": [
+    "Timmiaceae"
+  ],
+  "Hypnodendrales": [
+    "Hypnodendraceae",
+    "Pterobryellaceae",
+    "Racopilaceae"
+  ],
+  "Hookeriales": [
+    "Hookeriaceae",
+    "Daltoniaceae",
+    "Hypopterygiaceae",
+    "Pilotrichaceae",
+    "Saulomataceae",
+    "Schimperobryaceae",
+    "Leucomiaceae"
+  ],
+  "Dicranales": [
+    "Ditrichaceae",
+    "Rhabdoweisiaceae",
+    "Erpodiaceae",
+    "Rhachitheciaceae",
+    "Schistostegaceae",
+    "Dicranaceae",
+    "Leucobryaceae",
+    "Calymperaceae",
+    "Fissidentaceae",
+    "Eustichiaceae",
+    "Viridivelleraceae",
+    "Hypodontiaceae",
+    "Bruchiaceae",
+    "Dicranellaceae",
+    "Amphidiaceae",
+    "Oncophoraceae",
+    "Leucophanaceae"
+  ],
+  "Equisetales": [
+    "Equisetaceae"
+  ],
+  "Osmundales": [
+    "Osmundaceae"
+  ],
+  "Gleicheniales": [
+    "Gleicheniaceae",
+    "Matoniaceae",
+    "Dipteridaceae"
+  ],
+  "Ginkgoales": [
+    "Ginkgoaceae"
+  ],
+  "Piperales": [
+    "Aristolochiaceae",
+    "Piperaceae",
+    "Saururaceae",
+    "Hydnoraceae"
+  ],
+  "Ceratophyllales": [
+    "Ceratophyllaceae"
+  ],
+  "Nymphaeales": [
+    "Cabombaceae",
+    "Nymphaeaceae",
+    "Hydatellaceae"
+  ],
+  "Proteales": [
+    "Nelumbonaceae",
+    "Platanaceae",
+    "Sabiaceae",
+    "Proteaceae"
+  ],
+  "Ranunculales": [
+    "Lardizabalaceae",
+    "Menispermaceae",
+    "Eupteleaceae",
+    "Ranunculaceae",
+    "Berberidaceae",
+    "Circaeasteraceae",
+    "Papaveraceae"
+  ],
+  "Cucurbitales": [
+    "Coriariaceae",
+    "Cucurbitaceae",
+    "Datiscaceae",
+    "Begoniaceae",
+    "Corynocarpaceae",
+    "Anisophylleaceae",
+    "Tetramelaceae",
+    "Apodanthaceae"
+  ],
+  "Trochodendrales": [
+    "Trochodendraceae"
+  ],
+  "Saxifragales": [
+    "Cercidiphyllaceae",
+    "Hamamelidaceae",
+    "Paeoniaceae",
+    "Crassulaceae",
+    "Grossulariaceae",
+    "Peridiscaceae",
+    "Saxifragaceae",
+    "Haloragaceae",
+    "Cynomoriaceae",
+    "Daphniphyllaceae",
+    "Aphanopetalaceae",
+    "Tetracarpaeaceae",
+    "Penthoraceae",
+    "Altingiaceae",
+    "Iteaceae"
+  ],
+  "Buxales": [
+    "Didymelaceae",
+    "Buxaceae"
+  ],
+  "Rosales": [
+    "Cannabaceae",
+    "Urticaceae",
+    "Moraceae",
+    "Ulmaceae",
+    "Barbeyaceae",
+    "Rosaceae",
+    "Elaeagnaceae",
+    "Rhamnaceae",
+    "Dirachmaceae"
+  ],
+  "Fagales": [
+    "Myricaceae",
+    "Fagaceae",
+    "Casuarinaceae",
+    "Juglandaceae",
+    "Rhoipteleaceae",
+    "Betulaceae",
+    "Nothofagaceae",
+    "Ticodendraceae"
+  ],
+  "Malpighiales": [
+    "Balanopaceae",
+    "Ochnaceae",
+    "Medusagynaceae",
+    "Malesherbiaceae",
+    "Achariaceae",
+    "Picrodendraceae",
+    "Elatinaceae",
+    "Quiinaceae",
+    "Caryocaraceae",
+    "Clusiaceae",
+    "Violaceae",
+    "Passifloraceae",
+    "Turneraceae",
+    "Salicaceae",
+    "Chrysobalanaceae",
+    "Rhizophoraceae",
+    "Rafflesiaceae",
+    "Euphorbiaceae",
+    "Pandaceae",
+    "Linaceae",
+    "Erythroxylaceae",
+    "Humiriaceae",
+    "Malpighiaceae",
+    "Trigoniaceae",
+    "Calophyllaceae",
+    "Hypericaceae",
+    "Lophopyxidaceae",
+    "Lacistemataceae",
+    "Ixonanthaceae",
+    "Peraceae",
+    "Bonnetiaceae",
+    "Ctenolophonaceae",
+    "Centroplacaceae",
+    "Euphroniaceae",
+    "Irvingiaceae",
+    "Goupiaceae",
+    "Phyllanthaceae",
+    "Putranjivaceae",
+    "Dichapetalaceae",
+    "Podostemaceae"
+  ],
+  "Caryophyllales": [
+    "Phytolaccaceae",
+    "Aizoaceae",
+    "Portulacaceae",
+    "Basellaceae",
+    "Ancistrocladaceae",
+    "Dioncophyllaceae",
+    "Frankeniaceae",
+    "Nyctaginaceae",
+    "Cactaceae",
+    "Didiereaceae",
+    "Caryophyllaceae",
+    "Molluginaceae",
+    "Amaranthaceae",
+    "Polygonaceae",
+    "Plumbaginaceae",
+    "Droseraceae",
+    "Nepenthaceae",
+    "Tamaricaceae",
+    "Sarcobataceae",
+    "Stegnospermataceae",
+    "Gisekiaceae",
+    "Microteaceae",
+    "Anacampserotaceae",
+    "Montiaceae",
+    "Talinaceae",
+    "Limeaceae",
+    "Lophiocarpaceae",
+    "Rhabdodendraceae",
+    "Physenaceae",
+    "Asteropeiaceae",
+    "Drosophyllaceae",
+    "Barbeuiaceae",
+    "Halophytaceae",
+    "Achatocarpaceae",
+    "Simmondsiaceae"
+  ],
+  "Crossosomatales": [
+    "Crossosomataceae",
+    "Stachyuraceae",
+    "Geissolomataceae",
+    "Staphyleaceae",
+    "Strasburgeriaceae",
+    "Guamatelaceae",
+    "Aphloiaceae"
+  ],
+  "Dilleniales": [
+    "Dilleniaceae"
+  ],
+  "Oxalidales": [
+    "Elaeocarpaceae",
+    "Cunoniaceae",
+    "Cephalotaceae",
+    "Connaraceae",
+    "Oxalidaceae",
+    "Huaceae",
+    "Brunelliaceae"
+  ],
+  "Ericales": [
+    "Sarraceniaceae",
+    "Lecythidaceae",
+    "Fouquieriaceae",
+    "Clethraceae",
+    "Cyrillaceae",
+    "Diapensiaceae",
+    "Symplocaceae",
+    "Styracaceae",
+    "Primulaceae",
+    "Sapotaceae",
+    "Theaceae",
+    "Actinidiaceae",
+    "Marcgraviaceae",
+    "Ericaceae",
+    "Ebenaceae",
+    "Mitrastemonaceae",
+    "Balsaminaceae",
+    "Polemoniaceae",
+    "Tetrameristaceae",
+    "Sladeniaceae",
+    "Roridulaceae",
+    "Pentaphylacaceae"
+  ],
+  "Malvales": [
+    "Bixaceae",
+    "Cistaceae",
+    "Dipterocarpaceae",
+    "Sarcolaenaceae",
+    "Malvaceae",
+    "Neuradaceae",
+    "Thymelaeaceae",
+    "Sphaerosepalaceae",
+    "Muntingiaceae",
+    "Cytinaceae",
+    "Cochlospermaceae"
+  ],
+  "Brassicales": [
+    "Caricaceae",
+    "Moringaceae",
+    "Resedaceae",
+    "Bataceae",
+    "Capparaceae",
+    "Tovariaceae",
+    "Brassicaceae",
+    "Salvadoraceae",
+    "Akaniaceae",
+    "Limnanthaceae",
+    "Tropaeolaceae",
+    "Stixaceae",
+    "Cleomaceae",
+    "Koeberliniaceae",
+    "Gyrostemonaceae",
+    "Emblingiaceae",
+    "Pentadiplandraceae",
+    "Setchellanthaceae",
+    "Borthwickiaceae"
+  ],
+  "Cornales": [
+    "Loasaceae",
+    "Hydrangeaceae",
+    "Cornaceae",
+    "Nyssaceae",
+    "Grubbiaceae",
+    "Hydrostachyaceae",
+    "Curtisiaceae"
+  ],
+  "Asterales": [
+    "Alseuosmiaceae",
+    "Menyanthaceae",
+    "Campanulaceae",
+    "Pentaphragmataceae",
+    "Goodeniaceae",
+    "Asteraceae",
+    "Calyceraceae",
+    "Argophyllaceae",
+    "Phellinaceae",
+    "Stylidiaceae",
+    "Rousseaceae"
+  ],
+  "Bruniales": [
+    "Columelliaceae",
+    "Bruniaceae"
+  ],
+  "Lamiales": [
+    "Byblidaceae",
+    "Verbenaceae",
+    "Lamiaceae",
+    "Phrymaceae",
+    "Plantaginaceae",
+    "Oleaceae",
+    "Scrophulariaceae",
+    "Gesneriaceae",
+    "Orobanchaceae",
+    "Bignoniaceae",
+    "Acanthaceae",
+    "Pedaliaceae",
+    "Lentibulariaceae",
+    "Stilbaceae",
+    "Schlegeliaceae",
+    "Plocospermataceae",
+    "Carlemanniaceae",
+    "Thomandersiaceae",
+    "Tetrachondraceae",
+    "Linderniaceae",
+    "Paulowniaceae",
+    "Calceolariaceae",
+    "Martyniaceae"
+  ],
+  "Oedogoniales": [
+    "Oedogoniaceae"
+  ],
+  "Coleochaetales": [
+    "Coleochaetaceae"
+  ],
+  "Trentepohliales": [
+    "Trentepohliaceae"
+  ],
+  "Klebsormidiales": [
+    "Elakatotrichaceae",
+    "Klebsormidiaceae"
+  ],
+  "Charales": [
+    "Characeae",
+    "Aclistocharaceae",
+    "Clavatoraceae",
+    "Porocharaceae"
+  ],
+  "Acrochaetiales": [
+    "Acrochaetiaceae"
+  ],
+  "Thoreales": [
+    "Thoreaceae"
+  ],
+  "Plocamiales": [
+    "Plocamiaceae",
+    "Sarcodiaceae",
+    "Pseudoanemoniaceae"
+  ],
+  "Sebdeniales": [
+    "Sebdeniaceae"
+  ],
+  "Corallinales": [
+    "Corallinaceae"
+  ],
+  "Hildenbrandiales": [
+    "Hildenbrandiaceae"
+  ],
+  "Calobryales": [
+    "Haplomitriaceae"
+  ],
+  "Ptilidiales": [
+    "Neotrichocoleaceae",
+    "Herzogianthaceae",
+    "Ptilidiaceae"
+  ],
+  "Blasiales": [
+    "Blasiaceae"
+  ],
+  "Treubiales": [
+    "Treubiaceae"
+  ],
+  "Sphaerocarpales": [
+    "Sphaerocarpaceae",
+    "Monocarpaceae",
+    "Riellaceae"
+  ],
+  "Lunulariales": [
+    "Lunulariaceae"
+  ],
+  "Anthocerotales": [
+    "Anthocerotaceae"
+  ],
+  "Tetraphidales": [
+    "Tetraphidaceae"
+  ],
+  "Archidiales": [
+    "Archidiaceae"
+  ],
+  "Orthotrichales": [
+    "Orthotrichaceae"
+  ],
+  "Splachnales": [
+    "Splachnaceae",
+    "Meesiaceae"
+  ],
+  "Oedipodiales": [
+    "Oedipodiaceae"
+  ],
+  "Hedwigiales": [
+    "Helicophyllaceae",
+    "Hedwigiaceae",
+    "Rhacocarpaceae"
+  ],
+  "Rhizogoniales": [
+    "Rhizogoniaceae"
+  ],
+  "Catoscopiales": [
+    "Catoscopiaceae"
+  ],
+  "Diphysciales": [
+    "Diphysciaceae"
+  ],
+  "Encalyptales": [
+    "Encalyptaceae",
+    "Bryobartramiaceae"
+  ],
+  "Buxbaumiales": [
+    "Buxbaumiaceae"
+  ],
+  "Bryoxiphiales": [
+    "Bryoxiphiaceae"
+  ],
+  "Isoetales": [
+    "Isoetaceae"
+  ],
+  "Ophioglossales": [
+    "Ophioglossaceae"
+  ],
+  "Hymenophyllales": [
+    "Hymenophyllaceae"
+  ],
+  "Cyatheales": [
+    "Cyatheaceae",
+    "Loxsomataceae",
+    "Cibotiaceae",
+    "Thyrsopteridaceae",
+    "Culcitaceae",
+    "Plagiogyriaceae",
+    "Metaxyaceae",
+    "Dicksoniaceae"
+  ],
+  "Salviniales": [
+    "Marsileaceae",
+    "Salviniaceae",
+    "Azollaceae"
+  ],
+  "Ephedrales": [
+    "Welwitschiaceae",
+    "Ephedraceae",
+    "Gnetaceae"
+  ],
+  "Austrobaileyales": [
+    "Austrobaileyaceae",
+    "Trimeniaceae",
+    "Schisandraceae"
+  ],
+  "Laurales": [
+    "Lauraceae",
+    "Calycanthaceae",
+    "Gomortegaceae",
+    "Monimiaceae",
+    "Hernandiaceae",
+    "Atherospermataceae",
+    "Siparunaceae"
+  ],
+  "Amborellales": [
+    "Amborellaceae"
+  ],
+  "Chloranthales": [
+    "Chloranthaceae"
+  ],
+  "Gunnerales": [
+    "Myrothamnaceae",
+    "Gunneraceae"
+  ],
+  "Garryales": [
+    "Eucommiaceae",
+    "Garryaceae"
+  ],
+  "Apiales": [
+    "Pittosporaceae",
+    "Araliaceae",
+    "Myodocarpaceae",
+    "Griseliniaceae",
+    "Torricelliaceae",
+    "Pennantiaceae",
+    "Apiaceae"
+  ],
+  "Myrtales": [
+    "Lythraceae",
+    "Crypteroniaceae",
+    "Myrtaceae",
+    "Onagraceae",
+    "Melastomataceae",
+    "Combretaceae",
+    "Vochysiaceae",
+    "Penaeaceae",
+    "Alzateaceae"
+  ],
+  "Santalales": [
+    "Olacaceae",
+    "Opiliaceae",
+    "Santalaceae",
+    "Loranthaceae",
+    "Balanophoraceae",
+    "Misodendraceae",
+    "Octoknemaceae",
+    "Coulaceae",
+    "Aptandraceae",
+    "Ximeniaceae",
+    "Schoepfiaceae",
+    "Erythropalaceae",
+    "Strombosiaceae"
+  ],
+  "Huerteales": [
+    "Dipentodontaceae",
+    "Tapisciaceae",
+    "Petenaeaceae",
+    "Gerrardinaceae"
+  ],
+  "Celastrales": [
+    "Celastraceae",
+    "Lepidobotryaceae"
+  ],
+  "Aquifoliales": [
+    "Aquifoliaceae",
+    "Cardiopteridaceae",
+    "Stemonuraceae",
+    "Helwingiaceae",
+    "Phyllonomaceae"
+  ],
+  "Magnoliopsida": [
+    "Icacinaceae",
+    "Metteniusaceae",
+    "Oncothecaceae",
+    "Vahliaceae"
+  ],
+  "Berberidopsidales": [
+    "Aextoxicaceae",
+    "Berberidopsidaceae"
+  ],
+  "Vitales": [
+    "Vitaceae"
+  ],
+  "Sapindales": [
+    "Sapindaceae",
+    "Burseraceae",
+    "Anacardiaceae",
+    "Rutaceae",
+    "Simaroubaceae",
+    "Meliaceae",
+    "Biebersteiniaceae",
+    "Kirkiaceae",
+    "Nitrariaceae"
+  ],
+  "Geraniales": [
+    "Melianthaceae",
+    "Geraniaceae",
+    "Francoaceae",
+    "Vivianiaceae",
+    "Ledocarpaceae"
+  ],
+  "Zygophyllales": [
+    "Zygophyllaceae",
+    "Krameriaceae"
+  ],
+  "Fabales": [
+    "Polygalaceae",
+    "Quillajaceae",
+    "Surianaceae",
+    "Fabaceae"
+  ],
+  "Gentianales": [
+    "Loganiaceae",
+    "Gentianaceae",
+    "Apocynaceae",
+    "Rubiaceae",
+    "Gelsemiaceae"
+  ],
+  "Solanales": [
+    "Solanaceae",
+    "Convolvulaceae",
+    "Sphenocleaceae",
+    "Hydroleaceae",
+    "Montiniaceae"
+  ],
+  "Boraginales": [
+    "Hydrophyllaceae",
+    "Boraginaceae",
+    "Wellstediaceae",
+    "Codonaceae",
+    "Ehretiaceae",
+    "Cordiaceae",
+    "Heliotropiaceae"
+  ],
+  "Dipsacales": [
+    "Caprifoliaceae",
+    "Valerianaceae",
+    "Adoxaceae",
+    "Dipsacaceae",
+    "Diervillaceae",
+    "Linnaeaceae"
+  ],
+  "Alismatales": [
+    "Butomaceae",
+    "Hydrocharitaceae",
+    "Alismataceae",
+    "Juncaginaceae",
+    "Aponogetonaceae",
+    "Scheuchzeriaceae",
+    "Potamogetonaceae",
+    "Cymodoceaceae",
+    "Ruppiaceae",
+    "Zosteraceae",
+    "Tofieldiaceae",
+    "Araceae",
+    "Maundiaceae",
+    "Posidoniaceae"
+  ],
+  "Poales": [
+    "Mayacaceae",
+    "Rapateaceae",
+    "Xyridaceae",
+    "Eriocaulaceae",
+    "Juncaceae",
+    "Flagellariaceae",
+    "Restionaceae",
+    "Ecdeiocoleaceae",
+    "Centrolepidaceae",
+    "Anarthriaceae",
+    "Cyperaceae",
+    "Thurniaceae",
+    "Poaceae",
+    "Typhaceae",
+    "Bromeliaceae",
+    "Joinvilleaceae"
+  ],
+  "Commelinales": [
+    "Commelinaceae",
+    "Pontederiaceae",
+    "Philydraceae",
+    "Haemodoraceae",
+    "Hanguanaceae"
+  ],
+  "Petrosaviales": [
+    "Petrosaviaceae"
+  ],
+  "Pandanales": [
+    "Triuridaceae",
+    "Pandanaceae",
+    "Velloziaceae",
+    "Stemonaceae",
+    "Cyclanthaceae"
+  ],
+  "Nemaliales": [
+    "Galaxauraceae",
+    "Liagoraceae"
+  ],
+  "Asparagales": [
+    "Tecophilaeaceae",
+    "Asteliaceae",
+    "Hypoxidaceae",
+    "Asparagaceae",
+    "Iridaceae",
+    "Xanthorrhoeaceae",
+    "Orchidaceae",
+    "Amaryllidaceae",
+    "Boryaceae",
+    "Xeronemataceae",
+    "Doryanthaceae",
+    "Lanariaceae",
+    "Blandfordiaceae",
+    "Ixioliriaceae"
+  ],
+  "Dioscoreales": [
+    "Nartheciaceae",
+    "Taccaceae",
+    "Dioscoreaceae",
+    "Burmanniaceae",
+    "Thismiaceae"
+  ],
+  "Liliales": [
+    "Colchicaceae",
+    "Melanthiaceae",
+    "Liliaceae",
+    "Smilacaceae",
+    "Corsiaceae",
+    "Alstroemeriaceae",
+    "Rhipogonaceae",
+    "Petermanniaceae",
+    "Campynemataceae",
+    "Philesiaceae"
+  ],
+  "Zingiberales": [
+    "Strelitziaceae",
+    "Zingiberaceae",
+    "Musaceae",
+    "Heliconiaceae",
+    "Lowiaceae",
+    "Costaceae",
+    "Marantaceae",
+    "Cannaceae"
+  ],
+  "Palmariales": [
+    "Rhodothamniellaceae",
+    "Palmariaceae",
+    "Rhodophysemataceae"
+  ],
+  "Stylonematales": [
+    "Stylonemataceae"
+  ],
+  "Rhodellales": [
+    "Rhodellaceae"
+  ],
+  "Scourfieldiales": [
+    "Scourfieldiaceae"
+  ],
+  "Pedinomonadales": [
+    "Pedinomonadaceae"
+  ],
+  "Rhodogorgonales": [
+    "Rhodogorgonaceae"
+  ],
+  "Rhodachlyales": [
+    "Rhodachlyaceae"
+  ],
+  "Dasypogonales": [
+    "Dasypogonaceae"
+  ],
+  "Paracryphiales": [
+    "Paracryphiaceae"
+  ],
+  "Trebouxiales": [
+    "Botryococcaceae",
+    "Trebouxiaceae"
+  ],
+  "Orthodontiales": [
+    "Orthodontiaceae"
+  ],
+  "Pihiellales": [
+    "Pihiellaceae"
+  ],
+  "Escalloniales": [
+    "Escalloniaceae"
+  ],
+  "Halymeniales": [
+    "Halymeniaceae",
+    "Tsengiaceae"
+  ],
+  "Erythropeltidales": [
+    "Erythrotrichiaceae"
+  ],
+  "Cyanidiales": [
+    "Cyanidiaceae",
+    "Galdieriaceae"
+  ],
+  "Glaucocystales": [
+    "Glaucocystaceae"
+  ],
+  "Acrosymphytales": [
+    "Acrosymphytaceae"
+  ],
+  "Balbianiales": [
+    "Balbianiaceae"
+  ],
+  "Rhodochaetales": [
+    "Rhodochaetaceae"
+  ],
+  "Colaconematales": [
+    "Colaconemataceae"
+  ],
+  "Sporolithales": [
+    "Sporolithaceae"
+  ],
+  "Balliales": [
+    "Balliaceae"
+  ],
+  "Peyssonneliales": [
+    "Peyssonneliaceae"
+  ],
+  "Monomastigales": [
+    "Monomastigaceae"
+  ],
+  "Prasinococcales": [
+    "Prasinococcaceae"
+  ],
+  "Palmophyllales": [
+    "Palmophyllaceae"
+  ],
+  "Oltmansiellopsidales": [
+    "Oltmannsiellopsidaceae"
+  ],
+  "Pseudoscourfieldiales": [
+    "Pycnococcaceae"
+  ],
+  "Dolichomastigales": [
+    "Dolichomastigaceae"
+  ],
+  "Mamiellales": [
+    "Bathycoccaceae",
+    "Mamiellaceae"
+  ],
+  "Mesostigmatales": [
+    "Mesostigmataceae"
+  ],
+  "Chlorokybales": [
+    "Chlorokybaceae"
+  ],
+  "Pyramimonadophyceae": [
+    "Pterosphaeridiaceae"
+  ],
+  "Ahnfeltiales": [
+    "Ahnfeltiaceae"
+  ],
+  "Microthamniales": [
+    "Microthamniaceae"
+  ],
+  "Entwisleiales": [
+    "Entwisleiaceae"
+  ],
+  "Scotinosphaerales": [
+    "Scotinosphaeraceae"
+  ],
+  "Glaucosphaerales": [
+    "Glaucosphaeraceae"
+  ],
+  "Chlorophyceae": [
+    "Chlorangiopsidaceae",
+    "Tetracystaceae"
+  ],
+  "Rufusiales": [
+    "Rufusiaceae"
+  ],
+  "Dixoniellales": [
+    "Dixoniellaceae"
+  ],
+  "Scouleriales": [
+    "Drummondiaceae",
+    "Scouleriaceae",
+    "Hymenolomataceae"
+  ],
+  "Ambuchananiales": [
+    "Ambuchananiaceae"
+  ],
+  "Phymatocerotales": [
+    "Phymatocerotaceae"
+  ],
+  "Leiosporocerotales": [
+    "Leiosporocerotaceae"
+  ],
+  "Neohodgsoniales": [
+    "Neohodgsoniaceae"
+  ],
+  "Picramniales": [
+    "Picramniaceae"
+  ],
+  "Naiaditales": [
+    "Naiaditaceae"
+  ],
+  "Jungermanniopsida": [
+    "Appianaceae"
+  ],
+  "Notothyladales": [
+    "Notothyladaceae"
+  ],
+  "Arecales": [
+    "Arecaceae"
+  ],
+  "Dendrocerotales": [
+    "Dendrocerotaceae"
+  ],
+  "Aulacomniales": [
+    "Aulacomniaceae"
+  ],
+  "Acorales": [
+    "Acoraceae"
+  ],
+  "Labyrinthulales": [
+    "Labyrinthulaceae"
+  ],
+  "Chytridiales": [
+    "Chytridiaceae",
+    "Chytriomycetaceae",
+    "Endochytriaceae",
+    "Synchytriaceae",
+    "Cladochytriaceae"
+  ],
+  "Plasmodiophorales": [
+    "Plasmodiophoraceae"
+  ],
+  "Saprolegniales": [
+    "Saprolegniaceae",
+    "Ectrogellaceae",
+    "Haliphthoraceae",
+    "Thraustochytriaceae",
+    "Leptolegniellaceae"
+  ],
+  "Mucorales": [
+    "Mucoraceae",
+    "Cunninghamellaceae",
+    "Choanephoraceae",
+    "Phycomycetaceae",
+    "Pilobolaceae",
+    "Mycotyphaceae",
+    "Lichtheimiaceae",
+    "Radiomycetaceae",
+    "Mycocladaceae",
+    "Rhizopodaceae",
+    "Lentamycetaceae",
+    "Backusellaceae",
+    "Syncephalastraceae",
+    "Saksenaeaceae",
+    "Umbelopsidaceae"
+  ],
+  "Peronosporales": [
+    "Peronosporaceae",
+    "Albuginaceae",
+    "Pythiaceae"
+  ],
+  "Pezizales": [
+    "Ascobolaceae",
+    "Chorioactidaceae",
+    "Caloscyphaceae",
+    "Sarcoscyphaceae",
+    "Sarcosomataceae",
+    "Morchellaceae",
+    "Pyronemataceae",
+    "Pezizaceae",
+    "Rhizinaceae",
+    "Tuberaceae",
+    "Discinaceae",
+    "Helvellaceae",
+    "Karstenellaceae",
+    "Ascodesmidaceae",
+    "Glaziellaceae",
+    "Carbomycetaceae"
+  ],
+  "Pertusariales": [
+    "Pertusariaceae",
+    "Coccotremataceae",
+    "Ochrolechiaceae",
+    "Megasporaceae",
+    "Icmadophilaceae"
+  ],
+  "Lecanorales": [
+    "Lecanoraceae",
+    "Haematommataceae",
+    "Brigantiaeaceae",
+    "Dactylosporaceae",
+    "Vezdaeaceae",
+    "Stereocaulaceae",
+    "Hymeneliaceae",
+    "Miltideaceae",
+    "Pilocarpaceae",
+    "Gypsoplacaceae",
+    "Megalariaceae",
+    "Mycoblastaceae",
+    "Biatorellaceae",
+    "Arctomiaceae",
+    "Malmideaceae",
+    "Byssolomataceae",
+    "Crocyniaceae",
+    "Ectolechiaceae",
+    "Aphanopsidaceae",
+    "Calycidiaceae",
+    "Parmeliaceae",
+    "Ramalinaceae",
+    "Cladoniaceae",
+    "Psoraceae",
+    "Tephromelataceae",
+    "Sarrameanaceae",
+    "Sphaerophoraceae"
+  ],
+  "Pleosporales": [
+    "Venturiaceae",
+    "Phaeosphaeriaceae",
+    "Fenestellaceae",
+    "Testudinaceae",
+    "Pleosporaceae",
+    "Melanommataceae",
+    "Arthopyreniaceae",
+    "Diademaceae",
+    "Cucurbitariaceae",
+    "Corynesporascaceae",
+    "Didymosphaeriaceae",
+    "Dacampiaceae",
+    "Leptosphaeriaceae",
+    "Lophiostomataceae",
+    "Delitschiaceae",
+    "Naetrocymbaceae",
+    "Parodiellaceae",
+    "Amniculicolaceae",
+    "Aigialaceae",
+    "Pleomassariaceae",
+    "Phaeotrichaceae",
+    "Montagnulaceae",
+    "Sporormiaceae",
+    "Zopfiaceae",
+    "Tubeufiaceae",
+    "Tetraplosphaeriaceae",
+    "Dothidotthiaceae",
+    "Morosphaeriaceae",
+    "Lindgomycetaceae",
+    "Massarinaceae"
+  ],
+  "Chaetothyriales": [
+    "Chaetothyriaceae",
+    "Coccodiniaceae",
+    "Herpotrichiellaceae"
+  ],
+  "Exobasidiales": [
+    "Brachybasidiaceae",
+    "Exobasidiaceae",
+    "Graphiolaceae",
+    "Cryptobasidiaceae"
+  ],
+  "Liceales": [
+    "Liceaceae",
+    "Reticulariaceae",
+    "Cribrariaceae"
+  ],
+  "Trichiales": [
+    "Dianemaceae",
+    "Trichiaceae"
+  ],
+  "Hyphochytriales": [
+    "Rhizidiomycetaceae",
+    "Anisolpidiaceae",
+    "Hyphochytriaceae"
+  ],
+  "Monoblepharidales": [
+    "Gonapodyaceae",
+    "Oedogoniomycetaceae",
+    "Monoblepharidaceae",
+    "Harpochytriaceae"
+  ],
+  "Mortierellales": [
+    "Mortierellaceae"
+  ],
+  "Dimargaritales": [
+    "Dimargaritaceae"
+  ],
+  "Helotiales": [
+    "Hemiphacidiaceae",
+    "Hyaloscyphaceae",
+    "Dermateaceae",
+    "Sclerotiniaceae",
+    "Helotiaceae",
+    "Vibrisseaceae",
+    "Phacidiaceae",
+    "Loramycetaceae",
+    "Rutstroemiaceae",
+    "Ascocorticiaceae"
+  ],
+  "Ophiostomatales": [
+    "Ophiostomataceae"
+  ],
+  "Peltigerales": [
+    "Pannariaceae",
+    "Lobariaceae",
+    "Placynthiaceae",
+    "Massalongiaceae",
+    "Peltigeraceae",
+    "Nephromataceae",
+    "Collemataceae",
+    "Coccocarpiaceae"
+  ],
+  "Teloschistales": [
+    "Letrouitiaceae",
+    "Microcaliciaceae",
+    "Physciaceae",
+    "Megalosporaceae",
+    "Teloschistaceae",
+    "Ropalosporaceae",
+    "Caliciaceae"
+  ],
+  "Umbilicariales": [
+    "Fuscideaceae",
+    "Ophioparmaceae",
+    "Rhizoplacopsidaceae",
+    "Elixiaceae",
+    "Umbilicariaceae"
+  ],
+  "Rhizocarpales": [
+    "Catillariaceae",
+    "Rhizocarpaceae"
+  ],
+  "Pucciniales": [
+    "Pucciniaceae",
+    "Phragmidiaceae",
+    "Pucciniastraceae",
+    "Pileolariaceae",
+    "Phakopsoraceae",
+    "Pucciniosiraceae",
+    "Mikronegeriaceae",
+    "Chaconiaceae",
+    "Melampsoraceae",
+    "Cronartiaceae",
+    "Coleosporiaceae",
+    "Raveneliaceae",
+    "Uropyxidaceae",
+    "Uncolaceae"
+  ],
+  "Diaporthales": [
+    "Diaporthaceae",
+    "Schizoparmaceae",
+    "Sydowiellaceae",
+    "Togniniaceae",
+    "Valsaceae",
+    "Melanconidaceae",
+    "Cryphonectriaceae",
+    "Gnomoniaceae",
+    "Pseudoplagiostomataceae",
+    "Melogrammataceae",
+    "Pseudovalsaceae"
+  ],
+  "Microascales": [
+    "Halosphaeriaceae",
+    "Ceratocystidaceae",
+    "Chadefaudiellaceae",
+    "Microascaceae"
+  ],
+  "Sordariales": [
+    "Sordariaceae",
+    "Helminthosphaeriaceae",
+    "Lasiosphaeriaceae",
+    "Chaetomiaceae",
+    "Cephalothecaceae"
+  ],
+  "Saccharomycetales": [
+    "Saccharomycetaceae",
+    "Cephaloascaceae",
+    "Saccharomycopsidaceae",
+    "Metschnikowiaceae",
+    "Saccharomycodaceae",
+    "Lipomycetaceae",
+    "Endomycetaceae",
+    "Dipodascaceae",
+    "Eremotheciaceae",
+    "Debaryomycetaceae",
+    "Phaffomycetaceae",
+    "Pichiaceae",
+    "Ascoideaceae",
+    "Trichomonascaceae"
+  ],
+  "Dothideomycetes": [
+    "Mycoporaceae",
+    "Lichenotheliaceae",
+    "Mastodiaceae",
+    "Micropeltidaceae",
+    "Hypsostromataceae",
+    "Eremomycetaceae",
+    "Mesnieraceae",
+    "Englerulaceae",
+    "Meliolinaceae",
+    "Saccardiaceae",
+    "Lautosporaceae",
+    "Phyllobatheliaceae",
+    "Myxotrichaceae",
+    "Brefeldiellaceae",
+    "Thrombiaceae",
+    "Phaneromycetaceae",
+    "Microtheliopsidaceae",
+    "Parmulariaceae",
+    "Parodiopsidaceae",
+    "Moriolaceae",
+    "Diporothecaceae",
+    "Eoterfeziaceae",
+    "Epigloeaceae",
+    "Phillipsiellaceae",
+    "Pyrenothricaceae",
+    "Roesleriaceae",
+    "Seuratiaceae",
+    "Pseudeurotiaceae",
+    "Aspidotheliaceae",
+    "Strigulaceae",
+    "Protothelenellaceae",
+    "Thelenellaceae",
+    "Ascoporiaceae",
+    "Argynnaceae",
+    "Protoscyphaceae",
+    "Polystomellaceae",
+    "Pseudoperisporiaceae",
+    "Vizellaceae"
+  ],
+  "Patellariales": [
+    "Patellariaceae"
+  ],
+  "Mycocaliciales": [
+    "Mycocaliciaceae",
+    "Sphinctrinaceae"
+  ],
+  "Lichinales": [
+    "Lichinaceae",
+    "Peltulaceae",
+    "Heppiaceae",
+    "Gloeoheppiaceae"
+  ],
+  "Ostropales": [
+    "Odontotremataceae",
+    "Coenogoniaceae",
+    "Porinaceae",
+    "Myeloconidiaceae",
+    "Graphidaceae",
+    "Gyalectaceae",
+    "Gomphillaceae",
+    "Stictidaceae",
+    "Phlyctidaceae",
+    "Asterothyriaceae",
+    "Thelotremataceae"
+  ],
+  "Phyllachorales": [
+    "Phyllachoraceae",
+    "Phaeochoraceae"
+  ],
+  "Schizosaccharomycetales": [
+    "Schizosaccharomycetaceae"
+  ],
+  "Taphrinales": [
+    "Taphrinaceae",
+    "Protomycetaceae"
+  ],
+  "Pneumocystidales": [
+    "Pneumocystidaceae"
+  ],
+  "Neolectales": [
+    "Neolectaceae"
+  ],
+  "Microthyriales": [
+    "Leptopeltidaceae",
+    "Aulographaceae",
+    "Microthyriaceae"
+  ],
+  "Capnodiales": [
+    "Euantennariaceae",
+    "Mycosphaerellaceae",
+    "Metacapnodiaceae",
+    "Antennulariellaceae",
+    "Piedraiaceae",
+    "Teratosphaeriaceae",
+    "Davidiellaceae",
+    "Capnodiaceae",
+    "Asterinaceae",
+    "Schizothyriaceae"
+  ],
+  "Erysiphales": [
+    "Erysiphaceae"
+  ],
+  "Rhytismatales": [
+    "Ascodichaenaceae",
+    "Cryptomycetaceae",
+    "Rhytismataceae",
+    "Cudoniaceae"
+  ],
+  "Leotiales": [
+    "Bulgariaceae",
+    "Leotiaceae"
+  ],
+  "Coronophorales": [
+    "Nitschkiaceae",
+    "Chaetosphaerellaceae",
+    "Scortechiniaceae",
+    "Bertiaceae"
+  ],
+  "Chaetosphaeriales": [
+    "Chaetosphaeriaceae"
+  ],
+  "Melanosporales": [
+    "Ceratostomataceae"
+  ],
+  "Coniochaetales": [
+    "Coniochaetaceae"
+  ],
+  "Sordariomycetes": [
+    "Batistiaceae",
+    "Plectosphaerellaceae",
+    "Apiosporaceae",
+    "Thyridiaceae",
+    "Magnaporthaceae",
+    "Obryzaceae",
+    "Annulatascaceae",
+    "Vialaeaceae",
+    "Kathistaceae",
+    "Reticulascaceae",
+    "Papulosaceae",
+    "Glomerellaceae"
+  ],
+  "Pyrenulales": [
+    "Xanthopyreniaceae",
+    "Monoblastiaceae",
+    "Requienellaceae",
+    "Massariaceae",
+    "Pyrenulaceae",
+    "Celotheliaceae"
+  ],
+  "Cantharellales": [
+    "Cantharellaceae",
+    "Clavulinaceae",
+    "Hydnaceae",
+    "Aphelariaceae",
+    "Botryobasidiaceae",
+    "Ceratobasidiaceae",
+    "Tulasnellaceae"
+  ],
+  "Archaeorhizomycetales": [
+    "Archaeorhizomycetaceae"
+  ],
+  "Hypocreales": [
+    "Ophiocordycipitaceae",
+    "Cordycipitaceae",
+    "Hypocreaceae",
+    "Clavicipitaceae",
+    "Bionectriaceae",
+    "Nectriaceae",
+    "Niessliaceae"
+  ],
+  "Hymenochaetales": [
+    "Schizoporaceae",
+    "Repetobasidiaceae",
+    "Hymenochaetaceae"
+  ],
+  "Polyporales": [
+    "Fomitopsidaceae",
+    "Meripilaceae",
+    "Meruliaceae",
+    "Cystostereaceae",
+    "Grammotheleaceae",
+    "Ganodermataceae",
+    "Limnoperdaceae",
+    "Phanerochaetaceae",
+    "Sparassidaceae",
+    "Polyporaceae",
+    "Xenasmataceae"
+  ],
+  "Agaricales": [
+    "Physalacriaceae",
+    "Schizophyllaceae",
+    "Psathyrellaceae",
+    "Porotheleaceae",
+    "Marasmiaceae",
+    "Pleurotaceae",
+    "Mycenaceae",
+    "Pterulaceae",
+    "Phelloriniaceae",
+    "Broomeiaceae",
+    "Tricholomataceae",
+    "Hydnangiaceae",
+    "Strophariaceae",
+    "Pluteaceae",
+    "Entolomataceae",
+    "Bolbitiaceae",
+    "Agaricaceae",
+    "Amanitaceae",
+    "Niaceae",
+    "Typhulaceae",
+    "Clavariaceae",
+    "Cortinariaceae",
+    "Hygrophoraceae",
+    "Cyphellaceae",
+    "Lyophyllaceae",
+    "Inocybaceae",
+    "Hemigasteraceae",
+    "Fistulinaceae"
+  ],
+  "Boletales": [
+    "Sclerodermataceae",
+    "Tapinellaceae",
+    "Serpulaceae",
+    "Suillaceae",
+    "Sclerogastraceae",
+    "Protogastraceae",
+    "Hygrophoropsidaceae",
+    "Rhizopogonaceae",
+    "Coniophoraceae",
+    "Gomphidiaceae",
+    "Paxillaceae",
+    "Boletaceae",
+    "Amylocorticiaceae",
+    "Boletinellaceae",
+    "Gyroporaceae",
+    "Gastrosporiaceae",
+    "Calostomataceae",
+    "Diplocystidiaceae",
+    "Gasterellaceae"
+  ],
+  "Gomphales": [
+    "Clavariadelphaceae",
+    "Lentariaceae",
+    "Gomphaceae"
+  ],
+  "Platygloeales": [
+    "Eocronartiaceae",
+    "Platygloeaceae"
+  ],
+  "Ustilaginales": [
+    "Melanotaeniaceae",
+    "Websdaneaceae",
+    "Geminaginaceae",
+    "Uleiellaceae",
+    "Anthracoideaceae",
+    "Cintractiellaceae",
+    "Clintamraceae",
+    "Ustilaginaceae"
+  ],
+  "Rhizophlyctidales": [
+    "Arizonaphlyctidaceae",
+    "Sonoraphlyctidaceae",
+    "Borealophlyctidaceae",
+    "Rhizophlyctidaceae"
+  ],
+  "Lobulomycetales": [
+    "Lobulomycetaceae"
+  ],
+  "Blastocladiales": [
+    "Sorochytriaceae",
+    "Coelomomycetaceae",
+    "Blastocladiaceae",
+    "Catenariaceae",
+    "Physodermataceae"
+  ],
+  "Entomophthorales": [
+    "Completoriaceae",
+    "Meristacraceae",
+    "Ancylistaceae",
+    "Neozygitaceae",
+    "Entomophthoraceae"
+  ],
+  "Harpellales": [
+    "Legeriomycetaceae",
+    "Harpellaceae"
+  ],
+  "Paraglomerales": [
+    "Paraglomeraceae"
+  ],
+  "Asellariales": [
+    "Asellariaceae"
+  ],
+  "Glomerales": [
+    "Glomeraceae",
+    "Claroideoglomeraceae"
+  ],
+  "Lagenidiales": [
+    "Olpidiopsidaceae",
+    "Sirolpidiaceae",
+    "Lagenidiaceae"
+  ],
+  "Physarales": [
+    "Physaraceae",
+    "Didymiaceae"
+  ],
+  "Stemonitales": [
+    "Stemonitaceae"
+  ],
+  "Basidiobolales": [
+    "Basidiobolaceae"
+  ],
+  "Leptomitales": [
+    "Leptomitaceae",
+    "Rhipidiaceae"
+  ],
+  "Geoglossales": [
+    "Geoglossaceae"
+  ],
+  "Eurotiales": [
+    "Trichocomaceae",
+    "Elaphomycetaceae",
+    "Thermoascaceae"
+  ],
+  "Laboulbeniales": [
+    "Laboulbeniaceae",
+    "Euceratomycetaceae",
+    "Herpomycetaceae",
+    "Ceratomycetaceae"
+  ],
+  "Agyriales": [
+    "Trapeliaceae",
+    "Agyriaceae",
+    "Schaereriaceae",
+    "Anamylopsoraceae"
+  ],
+  "Candelariales": [
+    "Candelariaceae"
+  ],
+  "Dothideales": [
+    "Dothideaceae",
+    "Coccoideaceae",
+    "Dothioraceae",
+    "Planistromellaceae"
+  ],
+  "Arthoniales": [
+    "Arthoniaceae",
+    "Chrysothricaceae",
+    "Roccellaceae"
+  ],
+  "Lecanoromycetes": [
+    "Arthrorhaphidaceae",
+    "Thelocarpaceae",
+    "Pachyascaceae",
+    "Coniocybaceae"
+  ],
+  "Trypetheliales": [
+    "Trypetheliaceae"
+  ],
+  "Verrucariales": [
+    "Adelococcaceae",
+    "Verrucariaceae"
+  ],
+  "Arthoniomycetes": [
+    "Melaspileaceae"
+  ],
+  "Myriangiales": [
+    "Cookellaceae",
+    "Elsinoaceae",
+    "Myriangiaceae"
+  ],
+  "Botryosphaeriales": [
+    "Botryosphaeriaceae"
+  ],
+  "Onygenales": [
+    "Arthrodermataceae",
+    "Onygenaceae",
+    "Gymnoascaceae",
+    "Ajellomycetaceae"
+  ],
+  "Ascosphaerales": [
+    "Ascosphaeraceae"
+  ],
+  "Eurotiomycetes": [
+    "Eremascaceae",
+    "Monascaceae",
+    "Amorphothecaceae",
+    "Rhynchostomataceae"
+  ],
+  "Lulworthiales": [
+    "Hispidicarpomycetaceae",
+    "Spathulosporaceae",
+    "Lulworthiaceae"
+  ],
+  "Coryneliales": [
+    "Coryneliaceae"
+  ],
+  "Trichosphaeriales": [
+    "Trichosphaeriaceae"
+  ],
+  "Medeolariales": [
+    "Medeolariaceae"
+  ],
+  "Sporidiobolales": [
+    "Sporidiobolaceae"
+  ],
+  "Eremithallales": [
+    "Eremithallaceae"
+  ],
+  "Xylariales": [
+    "Myelospermataceae",
+    "Iodosphaeriaceae",
+    "Cainiaceae",
+    "Xylariaceae",
+    "Diatrypaceae",
+    "Graphostromataceae",
+    "Clypeosphaeriaceae",
+    "Amphisphaeriaceae",
+    "Hyponectriaceae"
+  ],
+  "Russulales": [
+    "Lachnocladiaceae",
+    "Peniophoraceae",
+    "Russulaceae",
+    "Hericiaceae",
+    "Stereaceae",
+    "Stephanosporaceae",
+    "Hybogasteraceae",
+    "Bondarzewiaceae",
+    "Auriscalpiaceae",
+    "Albatrellaceae",
+    "Echinodontiaceae",
+    "Amylostereaceae"
+  ],
+  "Thelephorales": [
+    "Bankeraceae",
+    "Thelephoraceae"
+  ],
+  "Sebacinales": [
+    "Sebacinaceae"
+  ],
+  "Tremellales": [
+    "Sirobasidiaceae",
+    "Hyaloriaceae",
+    "Tremellaceae",
+    "Tetragoniomycetaceae",
+    "Phragmoxenidiaceae",
+    "Carcinomycetaceae",
+    "Cuniculitremaceae",
+    "Rhynchogastremataceae",
+    "Trichosporonaceae"
+  ],
+  "Filobasidiales": [
+    "Filobasidiaceae"
+  ],
+  "Heterogastridiales": [
+    "Heterogastridiaceae"
+  ],
+  "Leucosporidiales": [
+    "Leucosporidiaceae"
+  ],
+  "Microbotryales": [
+    "Ustilentylomataceae",
+    "Microbotryaceae"
+  ],
+  "Cryptomycocolacales": [
+    "Cryptomycocolacaceae"
+  ],
+  "Cystobasidiales": [
+    "Cystobasidiaceae"
+  ],
+  "Helicobasidiales": [
+    "Helicobasidiaceae"
+  ],
+  "Pachnocybales": [
+    "Pachnocybaceae"
+  ],
+  "Mixiales": [
+    "Mixiaceae"
+  ],
+  "Tilletiales": [
+    "Erratomycetaceae",
+    "Tilletiaceae"
+  ],
+  "Urocystidales": [
+    "Doassansiopsidaceae",
+    "Mycosyringaceae",
+    "Floromycetaceae",
+    "Glomosporiaceae",
+    "Urocystidaceae"
+  ],
+  "Archaeosporales": [
+    "Archaeosporaceae",
+    "Geosiphonaceae",
+    "Ambisporaceae"
+  ],
+  "Diversisporales": [
+    "Diversisporaceae",
+    "Acaulosporaceae",
+    "Gigasporaceae",
+    "Pacisporaceae"
+  ],
+  "Echinostelliales": [
+    "Clastodermataceae",
+    "Echinosteliaceae"
+  ],
+  "Lecideales": [
+    "Lecideaceae",
+    "Porpidiaceae"
+  ],
+  "Auriculariales": [
+    "Auriculariaceae"
+  ],
+  "Ceratiomyxales": [
+    "Ceratiomyxaceae"
+  ],
+  "Endogonales": [
+    "Endogonaceae"
+  ],
+  "Kickxellales": [
+    "Kickxellaceae"
+  ],
+  "Orbiliales": [
+    "Orbiliaceae"
+  ],
+  "Acarosporales": [
+    "Acarosporaceae"
+  ],
+  "Lahmiales": [
+    "Lahmiaceae"
+  ],
+  "Hysteriales": [
+    "Hysteriaceae",
+    "Gloniaceae"
+  ],
+  "Mytilinidales": [
+    "Mytilinidiaceae"
+  ],
+  "Pyxidiophorales": [
+    "Pyxidiophoraceae"
+  ],
+  "Cyttariales": [
+    "Cyttariaceae"
+  ],
+  "Boliniales": [
+    "Catabotrydaceae",
+    "Boliniaceae"
+  ],
+  "Koralionastetales": [
+    "Koralionastetaceae"
+  ],
+  "Triblidiales": [
+    "Triblidiaceae"
+  ],
+  "Geastrales": [
+    "Geastraceae"
+  ],
+  "Calosphaeriales": [
+    "Pleurostomataceae",
+    "Calosphaeriaceae"
+  ],
+  "Atheliales": [
+    "Atheliaceae"
+  ],
+  "Atractiellales": [
+    "Phleogenaceae",
+    "Mycogelidiaceae",
+    "Atractogloeaceae",
+    "Saccoblastiaceae"
+  ],
+  "Agaricostibales": [
+    "Agaricostilbaceae",
+    "Chionosphaeraceae",
+    "Kondoaceae"
+  ],
+  "Classiculales": [
+    "Classiculaceae"
+  ],
+  "Georgefischeriales": [
+    "Georgefischeriaceae",
+    "Tilletiariaceae",
+    "Eballistraceae",
+    "Gjaerumiaceae"
+  ],
+  "Microstromatales": [
+    "Microstromataceae",
+    "Volvocisporiaceae",
+    "Quambalariaceae"
+  ],
+  "Spizellomycetales": [
+    "Spizellomycetaceae",
+    "Caulochytriaceae"
+  ],
+  "Rhizophydiales": [
+    "Protrudomycetaceae",
+    "Pateramycetaceae",
+    "Rhizophydiaceae",
+    "Terramycetaceae",
+    "Gorgonomycetaceae",
+    "Kappamycetaceae",
+    "Angulomycetaceae",
+    "Globomycetaceae",
+    "Alphamycetaceae",
+    "Aquamycetaceae"
+  ],
+  "Neocallimastigales": [
+    "Neocallimastigaceae"
+  ],
+  "Amoebidiales": [
+    "Amoebidiaceae"
+  ],
+  "Olpidiales": [
+    "Olpidiaceae"
+  ],
+  "Corticiales": [
+    "Corticiaceae"
+  ],
+  "Baeomycetales": [
+    "Baeomycetaceae"
+  ],
+  "Jahnulales": [
+    "Aliquandostipitaceae"
+  ],
+  "Acrospermales": [
+    "Acrospermaceae"
+  ],
+  "Thelebolales": [
+    "Thelebolaceae"
+  ],
+  "Meliolales": [
+    "Meliolaceae"
+  ],
+  "Arachnomycetales": [
+    "Arachnomycetaceae"
+  ],
+  "Gloeophyllales": [
+    "Gloeophyllaceae"
+  ],
+  "Entorrhizales": [
+    "Entorrhizaceae"
+  ],
+  "Wallemiales": [
+    "Wallemiaceae"
+  ],
+  "Basidiomycota": [
+    "Bartheletiaceae"
+  ],
+  "Trechisporales": [
+    "Hydnodontaceae"
+  ],
+  "Hysterangiales": [
+    "Hysterangiaceae",
+    "Gallaceaceae",
+    "Phallogastraceae",
+    "Mesophelliaceae",
+    "Trappeaceae"
+  ],
+  "Phallales": [
+    "Phallaceae",
+    "Claustulaceae"
+  ],
+  "Dacrymycetales": [
+    "Dacrymycetaceae"
+  ],
+  "Cystofilobasidiales": [
+    "Cystofilobasidiaceae"
+  ],
+  "Doassinsiales": [
+    "Rhamphosporaceae",
+    "Doassansiaceae",
+    "Melaniellaceae"
+  ],
+  "Entylomatales": [
+    "Entylomataceae"
+  ],
+  "Septobasidiales": [
+    "Septobasidiaceae"
+  ],
+  "Zoopagales": [
+    "Cochlonemataceae",
+    "Helicocephalidaceae",
+    "Piptocephalidaceae",
+    "Sigmoideomycetaceae",
+    "Zoopagaceae"
+  ]
+}
