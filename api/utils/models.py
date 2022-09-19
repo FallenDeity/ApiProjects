@@ -1,7 +1,19 @@
 import datetime
 from dataclasses import dataclass
 
-__all__: tuple[str, ...] = ("Price", "Sql", "User", "Production", "Kingdom", "Divisions", "Classes")
+__all__: tuple[str, ...] = ("Price", "Sql", "User", "Production", "Kingdom", "Divisions", "Classes", "Plant")
+
+
+@dataclass
+class Plant:
+    common_name: str | None
+    scientific_name: str | None
+    author: str | None
+    description: str | None
+    rank: str | None
+    family: str | None
+    genus: str | None
+    image: str | None
 
 
 @dataclass

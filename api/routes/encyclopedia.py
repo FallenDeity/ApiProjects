@@ -1,14 +1,18 @@
+import asyncio
 import json
 import math
 import os
 import typing
+from concurrent.futures import ThreadPoolExecutor
+from functools import partial
 from typing import TYPE_CHECKING
 
 import aiofiles
+import requests
+from bs4 import BeautifulSoup
 from fastapi import APIRouter, FastAPI
-from fastapi.responses import ORJSONResponse
 
-from api.utils import Classes, Divisions, Kingdom
+from api.utils import Classes, Divisions, Kingdom, Plant
 
 if TYPE_CHECKING:
     from api.setup import Database, Logs
@@ -24,6 +28,44 @@ class Encyclopedia:
     def __init__(self, database: "Database", logger: "Logs") -> None:
         self.database = database
         self.logger = logger
+
+    @staticmethod
+    def parser(holder: list, data: dict[str, typing.Any]) -> None:
+        desc = requests.get(
+            f"https://en.wikipedia.org/wiki/{data.get('scientific_name').replace(' ', '_').capitalize()}")
+        if desc.status_code != 200:
+            desc = requests.get(
+                f"https://en.wikipedia.org/wiki/{data.get('common_name').replace(' ', '_').capitalize()}")
+        soup = BeautifulSoup(desc.text, "html.parser")
+        try:
+            description = (
+                "".join([i.text for i in soup.find_all("p") if i.text][:7])
+                if desc.status_code == 200
+                else "No description found."
+            )
+        except AttributeError:
+            description = "No description found."
+        holder.append(
+            Plant(
+                **{
+                    "common_name": data.get("common_name"),
+                    "scientific_name": data.get("scientific_name"),
+                    "author": data.get("author"),
+                    "description": f"{description}... [{desc.url}]",
+                    "rank": data.get("rank"),
+                    "family": data.get("family"),
+                    "genus": data.get("genus"),
+                    "image": data.get("image_url"),
+                }
+            )
+        )
+
+    @staticmethod
+    def processor(data: list[dict[str, typing.Any]]) -> list[Plant]:
+        holder: list[Plant] = []
+        with ThreadPoolExecutor(max_workers=10) as pool:
+            pool.map(partial(Encyclopedia.parser, holder), data)
+        return holder
 
     @staticmethod
     def parse_kingdoms(data: dict[str, typing.Any]) -> Kingdom:
@@ -99,14 +141,15 @@ class Encyclopedia:
             data: dict[str, list[str]] = json.loads(await f.read())
         return data
 
-    async def search_plant(self, query: str) -> ORJSONResponse:
+    async def search_plant(self, query: str) -> list[Plant]:
         data, total = await self.get_len("plants/search", f"&q={query}")
         for i in range(1, total):
             response = await self.database.client.get(
                 f"{self.ENDPOINT}plants/search?key={self.ENCYCLOPEDIA_ID}&page={i}&q={query}"
             )
             data["data"].extend((await response.json())["data"])
-        return ORJSONResponse(data["data"])
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(None, partial(self.processor, [i for i in data["data"] if i["rank"] == "SPECIES"]))
 
     def setup(self) -> None:
         self.router.add_api_route("/encyclopedia/kingdoms", self.kingdoms, methods=["GET"], response_model=Kingdom)
@@ -115,7 +158,7 @@ class Encyclopedia:
         self.router.add_api_route("/encyclopedia/orders", self.orders, methods=["GET"], response_model=dict[str, list[str]])
         self.router.add_api_route("/encyclopedia/families", self.families, methods=["GET"], response_model=dict[str, list[str]])
         self.router.add_api_route("/encyclopedia/genus", self.genus, methods=["GET"], response_model=dict[str, list[str]])
-        self.router.add_api_route("/encyclopedia/search", self.search_plant, methods=["GET"], response_class=ORJSONResponse)
+        self.router.add_api_route("/encyclopedia/search", self.search_plant, methods=["GET"], response_model=list[Plant])
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
