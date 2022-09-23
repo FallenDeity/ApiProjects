@@ -1,5 +1,3 @@
-# Workflow for PyWeek DriveKnights
-
 name: Code formatter and linter
 
 on:
