@@ -87,5 +87,5 @@ class Climate:
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
     climate = Climate(database, logger)
     climate.setup()
-    app.include_router(climate.router, prefix="/api/v1", tags=["weather"])
+    app.include_router(climate.router, prefix="/api/v1", tags=["Weather"])
     logger.log("Weather API setup complete", "info")

@@ -164,5 +164,5 @@ class Encyclopedia:
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
     encyclopedia = Encyclopedia(database, logger)
     encyclopedia.setup()
-    app.include_router(encyclopedia.router, prefix="/api/v1", tags=["encyclopedia"])
+    app.include_router(encyclopedia.router, prefix="/api/v1", tags=["Encyclopedia"])
     logger.log("Encyclopedia routes loaded", "info")

@@ -69,5 +69,5 @@ class Identifier:
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
     identifier = Identifier(database, logger)
     identifier.setup()
-    app.include_router(identifier.router, prefix="/api/v1", tags=["identifier"])
+    app.include_router(identifier.router, prefix="/api/v1", tags=["Lens"])
     logger.log("Identifier routes loaded", "info")

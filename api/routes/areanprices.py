@@ -125,5 +125,5 @@ class AreanPrices:
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
     areanprices = AreanPrices(database, logger)
     areanprices.setup()
-    app.include_router(areanprices.router, prefix="/api/v1", tags=["Area&Prices"])
+    app.include_router(areanprices.router, prefix="/api/v1", tags=["Area and Prices"])
     logger.log("AreanPrices routes loaded", "info")
