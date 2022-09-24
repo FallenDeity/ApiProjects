@@ -1,5 +1,6 @@
 import os
 import typing
+import datetime
 
 import uvicorn
 from fastapi import FastAPI
@@ -18,6 +19,7 @@ class API:
     PATH: str = "api/routes"
     app: FastAPI = FastAPI()
     database: Database
+    uptime: datetime.datetime = datetime.datetime.now()
 
     def __init__(self) -> None:
         self.database = Database()
@@ -39,6 +41,10 @@ class API:
     @property
     def get_app(self) -> FastAPI:
         return self.app
+
+    @property
+    def up(self) -> datetime.datetime:
+        return self.uptime
 
     def run(self, *_args: typing.Optional[typing.Any], **_kwargs: typing.Optional[typing.Any]) -> None:
         uvicorn.run(self.app, debug=True)
