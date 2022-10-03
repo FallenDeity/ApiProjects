@@ -43,13 +43,13 @@ class Login:
         self.logger.log(f"Found user with phone number: {phone_number}", "info")
         return result
 
-    async def login(self, phone_number: int, password: str) -> bool:
+    async def login(self, phone_number: int, password: str) -> dict[str, bool]:
         result = await self.database.users.login_user(phone_number, password)
         if not result:
             self.logger.log(f"Invalid password for user with phone number: {phone_number}", "error")
             raise HTTPException(status_code=404, detail="Invalid password for user with that phone number")
         self.logger.log(f"User with phone number: {phone_number} logged in", "info")
-        return result
+        return {"found": True}
 
     async def register(self, phone_number: int, name: str, password: str, state: str, district: str) -> User:
         result = await self.validity_check(phone_number, state, district)
@@ -88,7 +88,7 @@ class Login:
         self.logger.log(f"User with phone number: {phone_number} deleted", "info")
 
     def setup(self) -> None:
-        self.router.add_api_route("/register/login", self.login, methods=["GET"], response_model=User)
+        self.router.add_api_route("/register/login", self.login, methods=["GET"], response_model=dict[str, bool])
         self.router.add_api_route("/register/register", self.register, methods=["GET"], response_model=User)
         self.router.add_api_route("/register/update_password", self.update_password, methods=["GET"], response_model=User)
         self.router.add_api_route("/register/update_location", self.update_location, methods=["GET"], response_model=User)
