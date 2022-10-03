@@ -81,7 +81,7 @@ class Login:
         await self.database.users.update_state(phone_number, state)
         await self.database.users.update_district(phone_number, district)
         self.logger.log(f"User with phone number: {phone_number} updated location", "info")
-        return await self.database.users.get_user(phone_number)
+        return await self.database.users.get_user(phone_number)        
 
     async def delete_user(self, phone_number: int) -> None:
         await self.database.users.delete_user(phone_number)
@@ -93,6 +93,7 @@ class Login:
         self.router.add_api_route("/register/update_password", self.update_password, methods=["GET"], response_model=User)
         self.router.add_api_route("/register/update_location", self.update_location, methods=["GET"], response_model=User)
         self.router.add_api_route("/register/delete_user", self.delete_user, methods=["GET"])
+        self.router.add_api_route("/register/info", self.get_user, methods=["GET"], response_model=User)
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
