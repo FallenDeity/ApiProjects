@@ -89,7 +89,7 @@ class Login:
     
     async def all_states(self) -> dict[str, list[str]]:
         states = await self.database.prices.get_all_states
-        res = {i: await self.prices.database.get_districts_by_state(i) for i in states}
+        res = {i: await self.database.prices.get_districts_by_state(i) for i in states}
         return res
 
     def setup(self) -> None:
