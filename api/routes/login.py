@@ -86,6 +86,11 @@ class Login:
     async def delete_user(self, phone_number: int) -> None:
         await self.database.users.delete_user(phone_number)
         self.logger.log(f"User with phone number: {phone_number} deleted", "info")
+    
+    async def all_states(self) -> dict[str, list[str]]:
+        states = await self.database.prices.get_all_states
+        res = {i: await self.prices.database.get_districts_by_state(i) for i in states}
+        return res
 
     def setup(self) -> None:
         self.router.add_api_route("/register/login", self.login, methods=["GET"], response_model=dict[str, bool])
@@ -94,6 +99,7 @@ class Login:
         self.router.add_api_route("/register/update_location", self.update_location, methods=["GET"], response_model=User)
         self.router.add_api_route("/register/delete_user", self.delete_user, methods=["GET"])
         self.router.add_api_route("/register/info", self.get_user, methods=["GET"], response_model=User)
+        self.router.add_api_route("/register/reigons", self.all_states, methods=["GET"], response_model=dict[str, list[str]])
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
