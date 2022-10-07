@@ -65,12 +65,7 @@ class Climate:
         return ORJSONResponse(await response.json())
 
     async def timeline(self, phonenumber: int, location: str | None = None) -> ORJSONResponse:
-        if location is None:
-            user = await self.database.users.get_user(phonenumber)
-            if not user:
-                self.logger.log(f"No user found with that number: {phonenumber}", "error")
-                raise HTTPException(status_code=404, detail="No user found with that username")
-            location = f"{user.state}, {user.district}"
+
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         response = await self.database.client.get(
             self.ENDPOINT + f"timeline/{location}/{date}",
@@ -78,11 +73,24 @@ class Climate:
         )
         return ORJSONResponse(await response.json())
 
+    async def daily(self, phonenumber: int, location: str | None = None, date: str | None = None) -> ORJSONResponse:
+        if location is None:
+            user = await self.database.users.get_user(phonenumber)
+            if not user:
+                self.logger.log(f"No user found with that number: {phonenumber}", "error")
+                raise HTTPException(status_code=404, detail="No user found with that username")
+            location = f"{user.state}, {user.district}"
+        date = date or f"{datetime.datetime.now():%Y-%m-%d}"
+        response = await self.database.client.get(self.ENDPOINT + f"timeline/{location}/{date}",
+                                                  params = {"key": self.WEATHER_API, "unitGroup": "metric"})
+        return ORJSONResponse(await response.json())
+
+
     def setup(self) -> None:
         self.router.add_api_route("/weather/forecast", self.forecast, methods=["GET"], response_class=ORJSONResponse)
         self.router.add_api_route("/weather/history", self.history, methods=["GET"], response_class=ORJSONResponse)
         self.router.add_api_route("/weather/timeline", self.timeline, methods=["GET"], response_class=ORJSONResponse)
-
+        self.router.add_api_route("/weather/daily", self.daily, methods=["GET"], response_class=ORJSONResponse)
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
     climate = Climate(database, logger)
