@@ -50,7 +50,7 @@ class Value:
     PRODUCE: float
 
 
-@dataclass
+@dataclass(frozen=True)
 class Production:
     ID: int
     CROP: str
