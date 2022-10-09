@@ -1,5 +1,5 @@
 import datetime
-from dataclasses import dataclass, InitVar
+from dataclasses import dataclass
 
 __all__: tuple[str, ...] = ("Price", "Sql", "User", "Production", "Kingdom", "Divisions", "Classes", "Plant")
 
@@ -56,10 +56,14 @@ class Production:
     CROP: str
     FREQUENCY: str
     UNIT: str
-    VALUES: InitVar[list[float]]
+    VALUES: list[Value]
 
-    def __post_init__(self, VALUES: list[float]) -> None:
-        self.VALUES: list[Value] = [Value(int(year), value) for year, value in enumerate(VALUES, start=1993)]
+    def __init__(self, _id: int, crop: str, freq: str, unit: str, val: list[float]):
+        self.ID = _id
+        self.CROP = crop
+        self.FREQUENCY = freq
+        self.UNIT = unit
+        self.VALUES = [Value(int(year), value) for year, value in enumerate(val, start=1993)]
 
 
 @dataclass(frozen=True)
