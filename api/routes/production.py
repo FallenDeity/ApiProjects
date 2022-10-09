@@ -22,7 +22,8 @@ class Produce:
 
     @staticmethod
     def intersection(items: list[list[Production]]) -> list[Production]:
-        return list(set.intersection(*map(lambda x: set(x), items)))
+        res = set.intersection(*map(lambda x: set([i.ID for i in x]), items))
+        return [i for i in sum(items, []) if i.ID in res]
 
     async def get_by_crop(self, crop: str) -> list[Production]:
         result = await self.database.production.get_by_name(crop)
