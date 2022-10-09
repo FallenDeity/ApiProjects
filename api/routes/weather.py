@@ -69,7 +69,7 @@ class Climate:
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         response = await self.database.client.get(
             self.ENDPOINT + f"timeline/{location}/{date}",
-            params={"key": self.WEATHER_API, "include": "fcst,obs,stats,hours,alerts", "unitGroup": "metric"},
+            params={"key": self.WEATHER_API, "include": "fcst,obs,stats,hours,alerts", "unitGroup": "metric", "iconSet": "icons2"},
         )
         return ORJSONResponse(await response.json())
 
@@ -82,7 +82,7 @@ class Climate:
             location = f"{user.state}, {user.district}"
         date = date or f"{datetime.datetime.now():%Y-%m-%d}"
         response = await self.database.client.get(self.ENDPOINT + f"timeline/{location}/{date}",
-                                                  params = {"key": self.WEATHER_API, "unitGroup": "metric"})
+                                                  params = {"key": self.WEATHER_API, "unitGroup": "metric", "iconSet":"icons2"})
         return ORJSONResponse(await response.json())
 
 
