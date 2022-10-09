@@ -58,8 +58,8 @@ class Production:
     UNIT: str
     VALUES: InitVar[list[float]]
 
-    def __post_init__(self, values: list[float]) -> None:
-        self.VALUES: list[Value] = [Value(int(year), value) for year, value in enumerate(values, start=1993)]
+    def __post_init__(self, VALUES: list[float]) -> None:
+        self.VALUES: list[Value] = [Value(int(year), value) for year, value in enumerate(VALUES, start=1993)]
 
 
 @dataclass(frozen=True)
