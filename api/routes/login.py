@@ -91,6 +91,11 @@ class Login:
         states = await self.database.prices.get_all_states
         res = {i: await self.database.prices.get_districts_by_state(i) for i in states}
         return res
+    
+    async def all_markets(self) -> dict[str, list[str]]:
+        districts = await self.database.prices.get_all_districts
+        res = {i: await self.database.prices.get_markets_by_district(i) for i in districts}
+        return res
 
     def setup(self) -> None:
         self.router.add_api_route("/register/login", self.login, methods=["GET"], response_model=dict[str, bool])
@@ -100,6 +105,7 @@ class Login:
         self.router.add_api_route("/register/delete_user", self.delete_user, methods=["GET"])
         self.router.add_api_route("/register/info", self.get_user, methods=["GET"], response_model=User)
         self.router.add_api_route("/register/reigons", self.all_states, methods=["GET"], response_model=dict[str, list[str]])
+        self.router.add_api_route("/register/markets", self.all_markets, methods=["GET"], response_model=dict[str, list[str]])
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
