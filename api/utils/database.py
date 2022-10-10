@@ -142,6 +142,10 @@ class AreaToPrices(DatabaseModel):
     async def get_districts_by_state(self, state: str) -> list[str]:
         data = await self.exec_fetchall("SELECT DISTINCT DISTRICT FROM prices WHERE STATE = $1", (state,))
         return [row[0] for row in data]
+    
+    async def get_markets_by_district(self, district: str) -> list[str]:
+        data = await self.exec_fetchall("SELECT DISTINCT MARKET FROM prices WHERE DISTRICT = $1", (district,))
+        return [row[0] for row in data]
 
     @property
     async def get_all_markets(self) -> list[str]:
