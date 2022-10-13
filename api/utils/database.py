@@ -142,7 +142,7 @@ class AreaToPrices(DatabaseModel):
     async def get_districts_by_state(self, state: str) -> list[str]:
         data = await self.exec_fetchall("SELECT DISTINCT DISTRICT FROM prices WHERE STATE = $1", (state,))
         return [row[0] for row in data]
-    
+
     async def get_markets_by_district(self, district: str) -> list[str]:
         data = await self.exec_fetchall("SELECT DISTINCT MARKET FROM prices WHERE DISTRICT = $1", (district,))
         return [row[0] for row in data]
@@ -175,7 +175,9 @@ class AreaToPrices(DatabaseModel):
     async def get_between_budget(self, min_price: int, max_price: int) -> list[Price]:
         if max_price < min_price:
             min_price, max_price = max_price, min_price
-        data = await self.exec_fetchall("SELECT * FROM prices WHERE MODAL_PRICE BETWEEN $1 AND $2", (min_price, max_price))
+        data = await self.exec_fetchall(
+            "SELECT * FROM prices WHERE MODAL_PRICE BETWEEN $1 AND $2", (min_price, max_price)
+        )
         return [Price(*row) for row in data]
 
 
@@ -195,7 +197,9 @@ class Register(DatabaseModel):
         return True if data else False
 
     async def login_user(self, number: int, password: str) -> bool:
-        data = await self.exec_fetchone("SELECT * FROM users WHERE PHONENUMBER = $1 AND PASSWORD = $2", (number, password))
+        data = await self.exec_fetchone(
+            "SELECT * FROM users WHERE PHONENUMBER = $1 AND PASSWORD = $2", (number, password)
+        )
         return True if data else False
 
     async def register_user(self, user: User) -> bool:

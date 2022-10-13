@@ -72,9 +72,15 @@ class Produce:
 
     def setup(self) -> None:
         self.router.add_api_route("/produce/crop", self.get_by_crop, methods=["GET"], response_model=list[Production])
-        self.router.add_api_route("/produce/frequency", self.get_by_frequency, methods=["GET"], response_model=list[Production])
-        self.router.add_api_route("/produce/average", self.get_avg_production, methods=["GET"], response_model=list[Production])
-        self.router.add_api_route("/produce/filter", self.get_produce, methods=["GET"], response_model=list[Production])
+        self.router.add_api_route(
+            "/produce/frequency", self.get_by_frequency, methods=["GET"], response_model=list[Production]
+        )
+        self.router.add_api_route(
+            "/produce/average", self.get_avg_production, methods=["GET"], response_model=list[Production]
+        )
+        self.router.add_api_route(
+            "/produce/filter", self.get_produce, methods=["GET"], response_model=list[Production]
+        )
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:

@@ -1,4 +1,5 @@
 import typing
+from pathlib import Path
 
 import aiofiles
 import asyncpg
@@ -12,12 +13,12 @@ class DatabaseModel:
 
     __slots__: tuple[str, ...] = ("database_pool", "LINES")
     database_pool: asyncpg.pool.Pool
-    TABLES: str = "api/bin/tables"
+    TABLES: Path = Path(__file__).parent.parent / "bin" / "tables"
     TABLE: str
     LINES: Sql
 
     async def execute_statements(self) -> None:
-        async with aiofiles.open(f"{self.TABLES}/{self.TABLE}.sql", "r") as file:
+        async with aiofiles.open(self.TABLES / f"{self.TABLE}.sql", "r") as file:
             scripts = await file.read()
         self.LINES = Sql(*[i for i in scripts.split(";") if i.strip()])
 
@@ -35,7 +36,9 @@ class DatabaseModel:
         result: typing.Optional[asyncpg.Record] = await self.database_pool.fetchrow(query, *(data or []))
         return result
 
-    async def exec_fetchall(self, query: str, data: typing.Optional[tuple[typing.Any, ...]] = None) -> list[asyncpg.Record]:
+    async def exec_fetchall(
+        self, query: str, data: typing.Optional[tuple[typing.Any, ...]] = None
+    ) -> list[asyncpg.Record]:
         args: typing.Union[tuple, list] = data or []
         results: list[asyncpg.Record] = await self.database_pool.fetch(query, *args)
         return results

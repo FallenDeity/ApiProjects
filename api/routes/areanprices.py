@@ -115,9 +115,13 @@ class AreanPrices:
     def setup(self) -> None:
         self.router.add_api_route("/prices/id", self.get_by_id, methods=["GET"], response_model=Price)
         self.router.add_api_route("/prices/state", self.get_by_state, methods=["GET"], response_model=list[Price])
-        self.router.add_api_route("/prices/district", self.get_by_district, methods=["GET"], response_model=list[Price])
+        self.router.add_api_route(
+            "/prices/district", self.get_by_district, methods=["GET"], response_model=list[Price]
+        )
         self.router.add_api_route("/prices/market", self.get_by_market, methods=["GET"], response_model=list[Price])
-        self.router.add_api_route("/prices/commodity", self.get_by_commodity, methods=["GET"], response_model=list[Price])
+        self.router.add_api_route(
+            "/prices/commodity", self.get_by_commodity, methods=["GET"], response_model=list[Price]
+        )
         self.router.add_api_route("/prices/budget", self.get_by_budget, methods=["GET"], response_model=list[Price])
         self.router.add_api_route("/prices/filter", self.get_items, methods=["GET"], response_model=list[Price])
 

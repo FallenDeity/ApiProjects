@@ -32,10 +32,12 @@ class Encyclopedia:
     @staticmethod
     def parser(holder: list, data: dict[str, typing.Any]) -> None:
         desc = requests.get(
-            f"https://en.wikipedia.org/wiki/{data.get('scientific_name').replace(' ', '_').capitalize()}")
+            f"https://en.wikipedia.org/wiki/{data.get('scientific_name').replace(' ', '_').capitalize()}"
+        )
         if desc.status_code != 200:
             desc = requests.get(
-                f"https://en.wikipedia.org/wiki/{data.get('common_name').replace(' ', '_').capitalize()}")
+                f"https://en.wikipedia.org/wiki/{data.get('common_name').replace(' ', '_').capitalize()}"
+            )
         soup = BeautifulSoup(desc.text, "html.parser")
         try:
             description = (
@@ -116,14 +118,18 @@ class Encyclopedia:
     async def classes(self) -> Classes:
         data, total = await self.get_len("division_classes")
         for i in range(1, total):
-            response = await self.database.client.get(f"{self.ENDPOINT}division_classes?key={self.ENCYCLOPEDIA_ID}&page={i}")
+            response = await self.database.client.get(
+                f"{self.ENDPOINT}division_classes?key={self.ENCYCLOPEDIA_ID}&page={i}"
+            )
             data["data"].extend((await response.json())["data"])
         return self.parse_classes(data)
 
     async def orders(self) -> dict[str, list[str]]:
         data, total = await self.get_len("division_orders")
         for i in range(1, total):
-            response = await self.database.client.get(f"{self.ENDPOINT}division_orders?key={self.ENCYCLOPEDIA_ID}&page={i}")
+            response = await self.database.client.get(
+                f"{self.ENDPOINT}division_orders?key={self.ENCYCLOPEDIA_ID}&page={i}"
+            )
             data["data"].extend((await response.json())["data"])
         return self.parse_orders(data)
 
@@ -149,16 +155,26 @@ class Encyclopedia:
             )
             data["data"].extend((await response.json())["data"])
         loop = asyncio.get_event_loop()
-        return await loop.run_in_executor(None, partial(self.processor, [i for i in data["data"] if i["rank"] == "SPECIES"]))
+        return await loop.run_in_executor(
+            None, partial(self.processor, [i for i in data["data"] if i["rank"] == "SPECIES"])
+        )
 
     def setup(self) -> None:
         self.router.add_api_route("/encyclopedia/kingdoms", self.kingdoms, methods=["GET"], response_model=Kingdom)
         self.router.add_api_route("/encyclopedia/divisions", self.divisions, methods=["GET"], response_model=Divisions)
         self.router.add_api_route("/encyclopedia/classes", self.classes, methods=["GET"], response_model=Classes)
-        self.router.add_api_route("/encyclopedia/orders", self.orders, methods=["GET"], response_model=dict[str, list[str]])
-        self.router.add_api_route("/encyclopedia/families", self.families, methods=["GET"], response_model=dict[str, list[str]])
-        self.router.add_api_route("/encyclopedia/genus", self.genus, methods=["GET"], response_model=dict[str, list[str]])
-        self.router.add_api_route("/encyclopedia/search", self.search_plant, methods=["GET"], response_model=list[Plant])
+        self.router.add_api_route(
+            "/encyclopedia/orders", self.orders, methods=["GET"], response_model=dict[str, list[str]]
+        )
+        self.router.add_api_route(
+            "/encyclopedia/families", self.families, methods=["GET"], response_model=dict[str, list[str]]
+        )
+        self.router.add_api_route(
+            "/encyclopedia/genus", self.genus, methods=["GET"], response_model=dict[str, list[str]]
+        )
+        self.router.add_api_route(
+            "/encyclopedia/search", self.search_plant, methods=["GET"], response_model=list[Plant]
+        )
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:

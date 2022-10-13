@@ -10,7 +10,9 @@ class Logs:
         self.stream_logger.setLevel(logging.INFO)
 
     def file_handler(self) -> None:
-        file_handler = logging.handlers.RotatingFileHandler(filename="logs.log", maxBytes=1024 * 1024 * 10, backupCount=10)
+        file_handler = logging.handlers.RotatingFileHandler(
+            filename="logs.log", maxBytes=1024 * 1024 * 10, backupCount=10
+        )
         file_handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s"))
         self.file_logger.addHandler(file_handler)
 

@@ -25,7 +25,8 @@ class Login:
         if state not in await self.database.prices.get_all_states:
             self.logger.log(f"Invalid state: {state}", "error")
             raise HTTPException(
-                status_code=404, detail=f"Invalid state. Valid states are {', '.join(await self.database.prices.get_all_states)}"
+                status_code=404,
+                detail=f"Invalid state. Valid states are {', '.join(await self.database.prices.get_all_states)}",
             )
         if district not in await self.database.prices.get_all_districts:
             self.logger.log(f"Invalid district: {district}", "error")
@@ -81,17 +82,17 @@ class Login:
         await self.database.users.update_state(phone_number, state)
         await self.database.users.update_district(phone_number, district)
         self.logger.log(f"User with phone number: {phone_number} updated location", "info")
-        return await self.database.users.get_user(phone_number)        
+        return await self.database.users.get_user(phone_number)
 
     async def delete_user(self, phone_number: int) -> None:
         await self.database.users.delete_user(phone_number)
         self.logger.log(f"User with phone number: {phone_number} deleted", "info")
-    
+
     async def all_states(self) -> dict[str, list[str]]:
         states = await self.database.prices.get_all_states
         res = {i: await self.database.prices.get_districts_by_state(i) for i in states}
         return res
-    
+
     async def all_markets(self) -> dict[str, list[str]]:
         districts = await self.database.prices.get_all_districts
         res = {i: await self.database.prices.get_markets_by_district(i) for i in districts}
@@ -100,12 +101,20 @@ class Login:
     def setup(self) -> None:
         self.router.add_api_route("/register/login", self.login, methods=["GET"], response_model=dict[str, bool])
         self.router.add_api_route("/register/register", self.register, methods=["GET"], response_model=User)
-        self.router.add_api_route("/register/update_password", self.update_password, methods=["GET"], response_model=User)
-        self.router.add_api_route("/register/update_location", self.update_location, methods=["GET"], response_model=User)
+        self.router.add_api_route(
+            "/register/update_password", self.update_password, methods=["GET"], response_model=User
+        )
+        self.router.add_api_route(
+            "/register/update_location", self.update_location, methods=["GET"], response_model=User
+        )
         self.router.add_api_route("/register/delete_user", self.delete_user, methods=["GET"])
         self.router.add_api_route("/register/info", self.get_user, methods=["GET"], response_model=User)
-        self.router.add_api_route("/register/reigons", self.all_states, methods=["GET"], response_model=dict[str, list[str]])
-        self.router.add_api_route("/register/markets", self.all_markets, methods=["GET"], response_model=dict[str, list[str]])
+        self.router.add_api_route(
+            "/register/reigons", self.all_states, methods=["GET"], response_model=dict[str, list[str]]
+        )
+        self.router.add_api_route(
+            "/register/markets", self.all_markets, methods=["GET"], response_model=dict[str, list[str]]
+        )
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
