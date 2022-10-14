@@ -98,6 +98,10 @@ class Login:
         res = {i: await self.database.prices.get_markets_by_district(i) for i in districts}
         return res
 
+    async def all_crops(self) -> dict[str, list[str]]:
+        crops = await self.database.prices.get_all_commodities
+        return {"crops": crops}
+
     def setup(self) -> None:
         self.router.add_api_route("/register/login", self.login, methods=["GET"], response_model=dict[str, bool])
         self.router.add_api_route("/register/register", self.register, methods=["GET"], response_model=User)
@@ -115,6 +119,7 @@ class Login:
         self.router.add_api_route(
             "/register/markets", self.all_markets, methods=["GET"], response_model=dict[str, list[str]]
         )
+        self.router.add_api_route("/register/crops", self.all_crops, methods=["GET"], response_model=dict[str, list[str]])
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
