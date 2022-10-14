@@ -3,9 +3,9 @@ import pathlib
 import typing
 
 import uvicorn
-from fastapi import FastAPI, Request, HTTPException, Form
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
-from fastapi.routing import Mount
+from fastapi.routing import Mount, BaseRoute
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -28,7 +28,7 @@ class API:
     PATH: pathlib.Path = pathlib.Path(__file__).parent.parent / "routes"
     uptime: datetime.datetime = datetime.datetime.now()
     templates: Jinja2Templates = Jinja2Templates(directory="api/assets/templates")
-    routes: list[Mount] = [
+    routes: list[BaseRoute] = [
         Mount("/static", StaticFiles(directory="api/assets/templates/static"), name="static"),
         Mount("/images", StaticFiles(directory="api/assets/images"), name="images"),
     ]
@@ -43,14 +43,19 @@ class API:
         self.farmers = await self.database.users.get_all_users
         return self.templates.TemplateResponse(
             "index.html",
-            {"request": request, "name": __import__("api").__name__, "version": __import__("api").__version__, "farmers": self.farmers},
+            {
+                "request": request,
+                "name": __import__("api").__name__,
+                "version": __import__("api").__version__,
+                "farmers": self.farmers,
+            },
         )
 
-    async def form_submit(self, form: Form = Form()) -> HTMLResponse:
-        form = await form.form()
-        form = dict(form.__dict__["_dict"])
+    async def form_submit(self, form: Request) -> HTMLResponse:
+        form = await form.form()  # type: ignore
+        form = dict(form.__dict__["_dict"])  # type: ignore
         message = f"{form['firstname']} {form['lastname']} {form['subject']}"
-        num = int(form['phone'])
+        num = int(form["phone"])
         res = await self.database.users.add_message(num, message)
         if not res:
             self.logger.log(f"User with phone number: {num} not found", "error")
