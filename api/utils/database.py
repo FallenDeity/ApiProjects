@@ -192,6 +192,18 @@ class Register(DatabaseModel):
         await self.execute_statements()
         await self.exec_write_query(self.LINES.create)
 
+    async def add_message(self, number: int, message: str) -> bool:
+        user = await self.get_user(number)
+        if not user:
+            return False
+        user.message.append(message)
+        await self.exec_write_query("UPDATE users SET MESSAGE = $1 WHERE PHONENUMBER = $2", (user.message, number))
+        return True
+
+    async def seen_message(self, number: int) -> bool:
+        await self.exec_write_query("UPDATE users SET MESSAGE = $1 WHERE PHONENUMBER = $2", ([], number))
+        return True
+
     async def check_number(self, number: int) -> bool:
         data = await self.exec_fetchone("SELECT * FROM users WHERE PHONENUMBER = $1", (number,))
         return True if data else False

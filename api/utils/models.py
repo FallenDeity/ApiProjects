@@ -1,5 +1,5 @@
 import datetime
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 __all__: tuple[str, ...] = ("Price", "Sql", "User", "Production", "Kingdom", "Divisions", "Classes", "Plant")
 
@@ -94,4 +94,5 @@ class User:
     password: str
     state: str
     district: str
+    message: list[str] = field(default_factory=list)
     created_at: float = datetime.datetime.now().timestamp()
