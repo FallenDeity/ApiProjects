@@ -1,18 +1,47 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>AgroIndia</title>
-</head>
-<body>
-    <h1>Home</h1>
-    <p>Home page</p>
-    <h2>{{name}}</h2>
-        <p>Version: {{version}}</p>
-        <p>Author: <a href="https://github.com/FallenDeity/">FallenDeity</a></p>
-        <p>Source: <a href="https://github.com/FallenDeity/ApiProjects/">Github</a></p>
-        <p>Hosted on: <a href="https://agroindia.herokuapp.com/">Heroku</a></p>
-        <p>Documentation: <a href="https://agroindia.herokuapp.com/docs">Swagger</a></p>
-        <p>Routes: <a href="https://agroindia.herokuapp.com/redoc">Redoc</a></p>
-        <p>This is a simple API for AgroIndia</p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>{{ name }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}" type="text/css">
+    </head>
+    <body class="background">
+        <nav>
+            <div class="topnav">
+            <a href="https://agroindia.herokuapp.com/" class="active">Home</a>
+            <a href="https://github.com/FallenDeity/ApiProjects/">Source</a>
+            <a href="https://agroindia.herokuapp.com/docs">Docs</a>
+            <a href="https://agroindia.herokuapp.com/redoc">Redoc</a>
+            </div>
+        </nav>
+        <video autoplay muted loop="" id="myVideo" class="videobg">
+            <source src="{{ url_for('images', path='bg.mp4') }}" type="video/mp4">
+        </video>
+
+        <div class="card-holder">
+            {% for farmer in farmers %}
+                <div class="card">
+                    <img src="https://t4.ftcdn.net/jpg/03/32/59/65/240_F_332596535_lAdLhf6KzbW6PWXBWeIFTovTii1drkbT.jpg " alt="Avatar" class="rimg" width="300px">
+                    <div class="container">
+                        <h4><b>{{ farmer.name }} [{{ farmer.phone }}]</b></h4>
+                        <p>{{ farmer.state }}, {{ farmer.district }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="form-container">
+             <form action="{{ url_for('form_submit') }}" method="POST">
+                <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Farmer phone number..">
+                <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Submit">
+             </form>
+        </div>
+    </body>
 </html>

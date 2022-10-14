@@ -36,14 +36,6 @@ class Login:
             )
         return True
 
-    async def send_message(self, phone_number: int, message: str) -> dict[str, str]:
-        res = await self.database.users.add_message(phone_number, message)
-        if not res:
-            self.logger.log(f"User with phone number: {phone_number} not found", "error")
-            raise HTTPException(status_code=404, detail="User with that phone number not found")
-        self.logger.log(f"Message sent to user with phone number: {phone_number}", "info")
-        return {"response": "Message sent"}
-
     async def get_messages(self, phone_number: int) -> dict[str, list[str]]:
         messages = await self.database.users.get_user(phone_number)
         self.logger.log(f"Messages sent to user with phone number: {phone_number}", "info")
@@ -141,12 +133,11 @@ class Login:
             "/register/crops", self.all_crops, methods=["GET"], response_model=dict[str, list[str]]
         )
         self.router.add_api_route(
-            "/register/send_message", self.send_message, methods=["GET"], response_model=dict[str, str]
-        )
-        self.router.add_api_route(
             "/register/get_messages", self.get_messages, methods=["GET"], response_model=dict[str, list[str]]
         )
-        self.router.add_api_route("/register/seen_messages", self.seen_message, methods=["GET"], response_model=User)
+        self.router.add_api_route(
+            "/register/seen_messages", self.seen_message, methods=["GET"], response_model=dict[str, str]
+        )
 
 
 async def setup(app: FastAPI, database: "Database", logger: "Logs") -> None:
