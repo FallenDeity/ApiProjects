@@ -1,5 +1,8 @@
 ![](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)
 ![](https://img.shields.io/badge/%20type_checker-mypy-%231674b1?style=flat-square)
+![](https://img.shields.io/github/license/Manipal-Hackathon-2022/Team-Nexus?style=flat-square)
+![](https://img.shields.io/github/stars/Manipal-Hackathon-2022/Team-Nexus?style=flat-square)
+![](https://img.shields.io/github/Manipal-Hackathon-2022/Team-Nexus?style=flat-square)
 
 # AgroIndia
 
